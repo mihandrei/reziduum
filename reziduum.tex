@@ -9,6 +9,10 @@
 \newtheorem{theorem}{Teorema}
 \newtheorem{definition}{Definitie}
 \newtheorem{notation}{Notatie}
+\newtheorem{observation}{Observatie}
+
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
 
 \begin{document}
 \title{Teorema Reziduurilor}
@@ -23,21 +27,104 @@
 \section{Notiuni introductive}
 
 \begin{notation}
-
-\begin{equation}
-	\begin{aligned}
-		\mathbb C &= \text{planul complex}\\
-		C^* &= \mathbb{C}\setminus \{0\} \\
-		C_\infty &= \mathbb{C}\cup \{\infty\} \\
-		\mathcal{P}(\mathbb{C}) &= \text{multimea partilor lui } \mathbb{C} \\
-		\mathcal{P}(\mathbb{R}) &= \text{multimea partilor lui } \mathbb{R} \\
-		\mathcal{U}(z_0;r) &= \{z \in \mathbb{C} \colon |z - z_0| < r \} \text{discul cu centru in } z_0 \text{ si raza } r \\
-		\dot{\mathcal{U}}(z_0;r) &= \mathcal{U}(z_0;r) \setminus \{z_0\}
-	\end{aligned}
-\end{equation}
-
-		
+	\begin{align*}
+		&\C && \text{ planul complex} \\
+		C^* &:= \C \setminus \{0\}   \\
+		C_\infty &:= \C\cup \{\infty\} \\
+		&\mathcal{P}(\C) && \text{ multimea partilor lui } \C \\
+		&\mathcal{P}(\R) && \text{ multimea partilor lui } \R \\
+		\mathcal{U}(z_0;r) &:= \{z \in \C \colon |z - z_0| < r \} && \text{ discul cu centru in } z_0 \text{ si raza } r \\
+		\dot{\mathcal{U}}(z_0;r) &:= \mathcal{U}(z_0;r) \setminus \{z_0\} && \text{ discul punctat de raza } r \text{ si centrul in } z_0 \\
+		\mathcal{U}(z_0;r_1,r_2) &:= \{z \in \C \colon r_1 < |z - z_0| < r_2 \} && \text{ coroana circulara de centru } z_0 \text { si raze } r_1 , r_2 \\
+		\mathcal{U}(z_0;r_2) &= \mathcal{U}(z_0;r_1,r_2) && \text{ cand } r_1 = 0\\
+		\overline{\mathcal{U}}(z_0;r) &:= \{z \in \C \colon |z - z_0| \leq r \} && \text{ discul inchis de raza } r \text{ si centru } z_0 \\
+		\partial\mathcal{U}(z_0;r) &:= \{z \in \C \colon |z - z_0| = r \} && \text{ bordura de raza } r \text{ si zentru } z_0
+	\end{align*}
 \end{notation}
+
+\begin{definition}
+	Fie $D$ o submultime a lui $\C$. Spunem ca este deschisa daca $\forall z \in D, \exists \mathcal{U}(z;r) \subset D$
+\end{definition}
+
+\begin{observation}
+	Multimile $\emptyset$ si $\C$ se considera deschise
+\end{observation}
+
+\begin{definition}
+	Fie $A$ o submultime a lui $\C$. Spunem ca $A$ este inchisa daca complementara ei $C(A)$ este deschisa
+\end{definition}
+
+\begin{definition}
+	Fie $B$ o submultime a lui $\C$. Spunem ca $B$ este conexa daca si numai daca $\nexists D_1, D_2 \in \C$ multimi deschise a.i.
+	\begin{align*}
+		B \cap D_1 &\neq \emptyset \\
+		B \cap D_2 &\neq \emptyset \\
+		B \cap D_1 \cap D_2 &= \emptyset \\
+		B \subset D_1 &\cup D_2
+	\end{align*}
+\end{definition}
+
+\begin{definition}
+	O submultime $B \subset \C$ este conexa daca $\nexists$ doua submultimi nevide disjuncte si deschise a lui $B$ a.i. reuniunea lor este egala cu $B$
+\end{definition}
+
+\begin{observation}
+	Daca $B$ este o submultime conexa a lui $\C$ iar $B \cap A \cap	\overline{B}$, atunci $A$ este conexa. In particular, aderenta $\forall$ multimi conexe este conexa.
+\end{observation}
+
+\begin{definition}
+	Fie $D$ o submultime a lui $\C$. $D$ se numeste domeniu daca este deschisa si conexa.
+\end{definition}
+
+\begin{notation}
+	\begin{align*}
+		\overline{A} && \text{ multimea punctelor aderente ale lui } A \text{ inchiderea} \\
+		A' && \text { multimea punctelor de acumulare ale lui } A \\
+		fr(A) = \partial A && \text { frontiera lui } A = \overline{A} \cap \overline{CA}
+	\end{align*}
+\end{notation}
+
+\begin{definition}
+ 	O  submultime $A$ a lui $\C$ se numeste marginita daca $\exists$ un disc $\mathcal{U}(z_0;r)$ a.i. $A \subset \mathcal{U}(z_0;r)$
+\end{definition}
+
+\begin{definition}
+	Un domeniu $D$ din $\C$ care pentru $\forall z \in D$ verifica $[z,z_0]\subset D$ se numeste domeniu stelat in raport cu $z_0 \in D$
+\end{definition}
+
+\begin{observation}\leavevmode
+	\begin{enumerate}
+		\item Un domeniu stelat in raport cu $\forall$ punct al sau se numeste domeniu convex
+		\item $\forall$ disc este stelat si convex
+		\item Discurile punctate sunt domenii , dar nu sunt si stelate: nu exista nici un punct $z_1 \in \dot{\mathcal{U}}(z_0;r)$ in raport cu care sa fie stelat
+	\end{enumerate}
+\end{observation}
+
+\begin{definition}
+	Spunem ca $A$ este compacta $\iff \forall$ sir $(z_u)$ din $A$ contine un subsir $(Z_{n_m})$ din $A$ care converge catre un punct $z_0 \in A$
+\end{definition}
+
+\begin{definition}
+	Fie $A, B$ multimi din $\C$. Distanta de la $A$ la $B$ este
+	\begin{equation}
+		d(A,B) = \inf\{d(a,b)\colon a \in A , b \in B \}
+	\end{equation}
+\end{definition}
+
+\begin{observation}\leavevmode
+\begin{enumerate}
+	\item Fie $A, B \subset \C, A \cap B \neq \emptyset$. Atunci :
+	$d(A, B) = 0$
+	\item Fie $A, B \subset \C, A \cap B = \emptyset$. Atunci :
+	$d(A, B) \geq 0$
+	\item Fie $A$ o multime compacta si $B$ o multime inchisa a.i. $A \cap B = \emptyset$. Atunci:
+	$d(A, B) > 0$
+	\item Fie $G$ o multime deschisa si $K$ compacta , $K\subset G$. Atunci :
+	$d(K, \partial B) > 0$
+\end{enumerate}
+
+
+\end{observation}
 
 
 \end{document}
