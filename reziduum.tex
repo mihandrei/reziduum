@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -10,9 +10,12 @@
 \newtheorem{definition}{Definitie}
 \newtheorem{notation}{Notatie}
 \newtheorem{observation}{Observatie}
+\newtheorem{consequence}{Consecinta}
+\newtheorem{example}{Ex}
 
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
 \newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand*\conj[1]{\overline{#1}}
 
 \begin{document}
 \title{Teorema Reziduurilor}
@@ -43,7 +46,8 @@
 \end{notation}
 
 \begin{definition}
-	Fie $D$ o submultime a lui $\C$. Spunem ca este deschisa daca $\forall z \in D, \exists \mathcal{U}(z;r) \subset D$
+	Fie $D$ o submultime a lui $\C$.
+	Spunem ca este deschisa daca $\forall z \in D, \exists \mathcal{U}(z;r) \subset D$
 \end{definition}
 
 \begin{observation}
@@ -51,11 +55,13 @@
 \end{observation}
 
 \begin{definition}
-	Fie $A$ o submultime a lui $\C$. Spunem ca $A$ este inchisa daca complementara ei $C(A)$ este deschisa
+	Fie $A$ o submultime a lui $\C$.
+	Spunem ca $A$ este inchisa daca complementara ei $C(A)$ este deschisa
 \end{definition}
 
 \begin{definition}
-	Fie $B$ o submultime a lui $\C$. Spunem ca $B$ este conexa daca si numai daca $\nexists D_1, D_2 \in \C$ multimi deschise a.i.
+	Fie $B$ o submultime a lui $\C$. Spunem ca $B$ este conexa daca si numai
+	daca $\nexists D_1, D_2 \in \C$ multimi deschise a.i.
 	\begin{align*}
 		B \cap D_1 &\neq \emptyset \\
 		B \cap D_2 &\neq \emptyset \\
@@ -65,11 +71,13 @@
 \end{definition}
 
 \begin{definition}
-	O submultime $B \subset \C$ este conexa daca $\nexists$ doua submultimi nevide disjuncte si deschise a lui $B$ a.i. reuniunea lor este egala cu $B$
+	O submultime $B \subset \C$ este conexa daca $\nexists$ doua submultimi
+	nevide disjuncte si deschise a lui $B$ a.i. reuniunea lor este egala cu $B$
 \end{definition}
 
 \begin{observation}
-	Daca $B$ este o submultime conexa a lui $\C$ iar $B \cap A \cap	\overline{B}$, atunci $A$ este conexa. In particular, aderenta $\forall$ multimi conexe este conexa.
+	Daca $B$ este o submultime conexa a lui $\C$ iar $B \cap A \cap	\overline{B}$,
+	atunci $A$ este conexa. In particular, aderenta $\forall$ multimi conexe este conexa.
 \end{observation}
 
 \begin{definition}
@@ -85,23 +93,28 @@
 \end{notation}
 
 \begin{definition}
- 	O  submultime $A$ a lui $\C$ se numeste marginita daca $\exists$ un disc $\mathcal{U}(z_0;r)$ a.i. $A \subset \mathcal{U}(z_0;r)$
+ 	O  submultime $A$ a lui $\C$ se numeste marginita daca $\exists$ un disc
+ 	$\mathcal{U}(z_0;r)$ a.i. $A \subset \mathcal{U}(z_0;r)$
 \end{definition}
 
 \begin{definition}
-	Un domeniu $D$ din $\C$ care pentru $\forall z \in D$ verifica $[z,z_0]\subset D$ se numeste domeniu stelat in raport cu $z_0 \in D$
+	Un domeniu $D$ din $\C$ care pentru $\forall z \in D$ verifica
+	$[z,z_0]\subset D$ se numeste domeniu stelat in raport cu $z_0 \in D$
 \end{definition}
 
 \begin{observation}\leavevmode
 	\begin{enumerate}
-		\item Un domeniu stelat in raport cu $\forall$ punct al sau se numeste domeniu convex
+		\item Un domeniu stelat in raport cu $\forall$ punct al sau se numeste
+		 domeniu convex
 		\item $\forall$ disc este stelat si convex
-		\item Discurile punctate sunt domenii , dar nu sunt si stelate: nu exista nici un punct $z_1 \in \dot{\mathcal{U}}(z_0;r)$ in raport cu care sa fie stelat
+		\item Discurile punctate sunt domenii , dar nu sunt si stelate: nu exista
+		 nici un punct $z_1 \in \dot{\mathcal{U}}(z_0;r)$ in raport cu care sa fie stelat
 	\end{enumerate}
 \end{observation}
 
 \begin{definition}
-	Spunem ca $A$ este compacta $\iff \forall$ sir $(z_u)$ din $A$ contine un subsir $(Z_{n_m})$ din $A$ care converge catre un punct $z_0 \in A$
+	Spunem ca $A$ este compacta $\iff \forall$ sir $(z_u)$ din $A$ contine un
+	subsir $(Z_{n_m})$ din $A$ care converge catre un punct $z_0 \in A$
 \end{definition}
 
 \begin{definition}
@@ -113,19 +126,125 @@
 
 \begin{observation}\leavevmode
 \begin{enumerate}
-	\item Fie $A, B \subset \C, A \cap B \neq \emptyset$. Atunci :
-	$d(A, B) = 0$
-	\item Fie $A, B \subset \C, A \cap B = \emptyset$. Atunci :
-	$d(A, B) \geq 0$
-	\item Fie $A$ o multime compacta si $B$ o multime inchisa a.i. $A \cap B = \emptyset$. Atunci:
-	$d(A, B) > 0$
-	\item Fie $G$ o multime deschisa si $K$ compacta , $K\subset G$. Atunci :
-	$d(K, \partial B) > 0$
+	\item Fie $A, B \subset \C, A \cap B \neq \emptyset$.
+
+	Atunci $d(A, B) = 0$
+
+	\item Fie $A, B \subset \C, A \cap B = \emptyset$.
+
+	Atunci $d(A, B) \geq 0$
+
+	\item Fie $A$ o multime compacta si $B$ o multime inchisa a.i. $A \cap B = \emptyset$.
+
+	Atunci $d(A, B) > 0$
 \end{enumerate}
-
-
 \end{observation}
 
+\begin{consequence}
+	Fie $G$ o multime deschisa si $K$ compacta , $K\subset G$.
+
+	Atunci $d(K,\partial B)>0$
+\end{consequence}
+
+\begin{consequence}
+	Fie $G$ o multime deschisa si $K$ compacta , $K\subset G$.
+	Atunci $\exists \mathcal{U}(z_n;r), 0 < r < d(K, \partial G) ,
+	z_n \in K , k = \overline{1,n}$ a.i discul compact
+	$\overline{\mathcal{U}}(z_n;r) \subset G$ si $K \subset \bigcup_{k=1}^{n} \mathcal{U}(z_n;r)$
+\end{consequence}
+
+\begin{definition}
+	Fie functia $f:A \mapsto C$, unde $A\subset\C$ multime deschisa . Functia f
+	se numeste derivabila in $z_0$ daca $\exists$ si este finita urmatoarea
+	limita:
+	\begin{equation}
+		\lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}
+	\end{equation}
+	Daca $\exists$, aceasta se noteaza cu $f'(z_0)$ si se numeste derivata
+	functiei $f$ in $z_0$
+\end{definition}
+
+\begin{definition}
+	Spunem ca $f$ este olomorfa pe $A (A\subset\C\text{deschisa})$ daca este
+	derivabila in orice punct din $A$.
+	Notam cu $\mathcal{H}(A)$ multimea tuturor functiilor olomorfe pe $A$
+\end{definition}
+
+\begin{definition}
+	Spunem ca functia $f$ este $\R$ diferentiabila (real-diferentiabila)
+	in $z_0 = x_0 + iy_0 \in A$ daca functiile $u=Re f$ si $v = Im f $ sunt
+	diferentiabile in $(z_0, y_0)$
+\end{definition}
+
+\begin{definition}
+	Spunem ca functia $f$ este $\C$ diferentiabila (complex-diferentiabila)
+	in $z_0 \in A$ daca $\exists$ un numar complex $N$ si o functie
+	$g:A\setminus \{z_0\} \mapsto \C$ a.i. $lim_{z\to z_0} g(z) = 0 $ si
+	$f(z) = f(z_0) + N(z-z_0) + g(z)(z-z_0) , z \in A\setminus \{z_0\}$
+\end{definition}
+
+\begin{observation}
+	Functia $f$ este derivabila in $z_0 \iff f$ este $\C$ diferentiabila in $z_0$
+\end{observation}
+
+\begin{theorem}
+	Cauchy - Riemann
+
+	O functie $f:A \mapsto C$ este derivabila in punctul $z_0 \in A$ daca si numai daca
+
+	\begin{enumerate}
+		\item $f$ este $\R$ diferentiabila in $z_0$
+		\item este satisfacut sistemul Cauchy-Riemann in $z_0$
+		\begin{equation}
+			\left .
+				\begin{aligned}
+					\frac{\partial u}{\partial x} (x_0,y_0) &=  \frac{\partial v}{\partial y}(x_0,y_0) \\
+					\frac{\partial u}{\partial y} (x_0,y_0) &= - \frac{\partial v}{\partial x}(x_0,y_0)
+				\end{aligned}
+			\right \}
+		\end{equation}
+	\end{enumerate}
+	unde $u=Re f , v = Im f $ si $z_0 = x_0 + i y_0$
+\end{theorem}
+
+\begin{example}
+	Fie $f:\C \mapsto C, f(z) = az + b\conj z$. Sa ser determine $a,b \in \R$ a.i.
+	$f$ sa fie derivabila in $z, \forall z \in \C$
+	\begin{proof}[Rez]
+		Cautam $u$ si $v$ 
+		
+		Fie $z=x+iy \implies f(z) = a(x+iy) + b(x-iy)$ 
+		
+		Deci $u=x(a+b)$ si  $v=y(a-b)$		
+
+		\begin{displaymath}
+			\left.
+				\begin{aligned}
+					\frac{\partial u}{\partial x} (x,y) &=  a+b \\
+					\frac{\partial u}{\partial y} (x,y) &= 0    \\
+					\frac{\partial v}{\partial x} (x,y) &= 0    \\
+					\frac{\partial v}{\partial y} (x,y) &= a-b \\
+				\end{aligned}
+			\right \}
+			\implies
+			\left \{
+				\begin{aligned}
+					a+b &=0   \\
+					-(a-b) &=0
+				\end{aligned}
+			\right.
+			\iff
+			\left \{
+				\begin{aligned}
+					a+b &=0   \\
+					b-a &=0 \quad |_+ \\
+					&\implies b = a = 0 
+				\end{aligned}
+			\right.						
+		\end{displaymath}
+		Deci $f(z) = 0$
+	\end{proof}
+\end{example}
 
 \end{document}
 
