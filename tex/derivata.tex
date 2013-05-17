@@ -1,0 +1,92 @@
+\section{Derivata complexa}
+\begin{definition}
+	Fie functia $f:A \mapsto C$, unde $A\subset\C$ multime deschisa . Functia f
+	se numeste derivabila in $z_0$ daca $\exists$ si este finita urmatoarea
+	limita:
+	\begin{equation}
+		\lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}
+	\end{equation}
+	Daca $\exists$, aceasta se noteaza cu $f'(z_0)$ si se numeste derivata
+	functiei $f$ in $z_0$
+\end{definition}
+
+\begin{definition}
+	Spunem ca $f$ este olomorfa pe $A (A\subset \C \text{deschisa})$ daca este
+	derivabila in orice punct din $A$.
+	Notam cu $\mathcal{H}(A)$ multimea tuturor functiilor olomorfe pe $A$
+\end{definition}
+
+\begin{definition}
+	Spunem ca functia $f$ este $\R$ diferentiabila (real-diferentiabila)
+	in $z_0 = x_0 + iy_0 \in A$ daca functiile $u=Re f$ si $v = Im f $ sunt
+	diferentiabile in $(z_0, y_0)$
+\end{definition}
+
+\begin{definition}
+	Spunem ca functia $f$ este $\C$ diferentiabila (complex-diferentiabila)
+	in $z_0 \in A$ daca $\exists$ un numar complex $N$ si o functie
+	$g:A\setminus \{z_0\} \mapsto \C$ a.i. $lim_{z\to z_0} g(z) = 0 $ si
+	$f(z) = f(z_0) + N(z-z_0) + g(z)(z-z_0) , z \in A\setminus \{z_0\}$
+\end{definition}
+
+\begin{observation}
+	Functia $f$ este derivabila in $z_0 \iff f$ este $\C$ diferentiabila in $z_0$
+\end{observation}
+
+\begin{theorem}
+	Cauchy - Riemann
+
+	O functie $f:A \mapsto C$ este derivabila in punctul $z_0 \in A$ daca si numai daca
+
+	\begin{enumerate}
+		\item $f$ este $\R$ diferentiabila in $z_0$
+		\item este satisfacut sistemul Cauchy-Riemann in $z_0$
+		\begin{equation}
+			\left .
+				\begin{aligned}
+					\frac{\partial u}{\partial x} (x_0,y_0) &=  \frac{\partial v}{\partial y}(x_0,y_0) \\
+					\frac{\partial u}{\partial y} (x_0,y_0) &= - \frac{\partial v}{\partial x}(x_0,y_0)
+				\end{aligned}
+			\right \}
+		\end{equation}
+	\end{enumerate}
+	unde $u=Re f , v = Im f $ si $z_0 = x_0 + i y_0$
+\end{theorem}
+
+\begin{example}
+	Fie $f:\C \mapsto C, f(z) = az + b\conj z$. Sa ser determine $a,b \in \R$ a.i.
+	$f$ sa fie derivabila in $z, \forall z \in \C$
+	\begin{proof}[Rez]
+		Cautam $u$ si $v$ 
+		
+		Fie $z=x+iy \implies f(z) = a(x+iy) + b(x-iy)$ 
+		
+		Deci $u=x(a+b)$ si  $v=y(a-b)$		
+
+		\begin{displaymath}
+			\left.
+				\begin{aligned}
+					\frac{\partial u}{\partial x} (x,y) &=  a+b \\
+					\frac{\partial u}{\partial y} (x,y) &= 0    \\
+					\frac{\partial v}{\partial x} (x,y) &= 0    \\
+					\frac{\partial v}{\partial y} (x,y) &= a-b \\
+				\end{aligned}
+			\right \}
+			\implies
+			\left \{
+				\begin{aligned}
+					a+b &= a-b \quad |_ -a + b   \\
+					0 &=0
+				\end{aligned}
+			\right.
+			\iff
+			\left \{
+				\begin{aligned}
+					&b = 0   \\
+					&a \in \R					
+				\end{aligned}
+			\right.						
+		\end{displaymath}
+		Deci $f(z) = az$
+	\end{proof}
+\end{example}
