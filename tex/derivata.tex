@@ -57,11 +57,11 @@
 	Fie $f:\C \mapsto C, f(z) = az + b\conj z$. Sa ser determine $a,b \in \R$ a.i.
 	$f$ sa fie derivabila in $z, \forall z \in \C$
 	\begin{proof}[Rez]
-		Cautam $u$ si $v$ 
-		
-		Fie $z=x+iy \implies f(z) = a(x+iy) + b(x-iy)$ 
-		
-		Deci $u=x(a+b)$ si  $v=y(a-b)$		
+		Cautam $u$ si $v$
+
+		Fie $z=x+iy \implies f(z) = a(x+iy) + b(x-iy)$
+
+		Deci $u=x(a+b)$ si  $v=y(a-b)$
 
 		\begin{displaymath}
 			\left.
@@ -75,7 +75,7 @@
 			\implies
 			\left \{
 				\begin{aligned}
-					a+b &= a-b \quad |_ -a + b   \\
+					a+b &= a-b \quad |_{-a + b}   \\
 					0 &=0
 				\end{aligned}
 			\right.
@@ -83,10 +83,43 @@
 			\left \{
 				\begin{aligned}
 					&b = 0   \\
-					&a \in \R					
+					&a \in \R
 				\end{aligned}
-			\right.						
+			\right.
 		\end{displaymath}
 		Deci $f(z) = az$
+
+		\emph Obs
+
+		$\frac{\partial f}{\partial{\conj z}} = b = 0$ , adica
+		$f'(z) = \frac{\partial u}{\partial x}(x,y) +
+		i\frac{\partial v}{\partial x}(x,y) = a, \forall z \in \C $
+
 	\end{proof}
 \end{example}
+
+\begin{observation}
+	Daca $f$ este de $k$ ori derivabila in $z_0$ o notam cu $f^{(k)}_{(z_{0})}$
+	si se numeste derivata de ordin $k$ a lui $f$ in $z_0$
+\end{observation}
+
+\begin{observation}
+	Daca functia $f \in \mathcal{H}(A)$ si $f'(z) \neq 0, z \in A$ , atunci
+	$f$ este o transformare conforma care pastreaza sensul de parcurs si
+	marimea unghiurilor
+\end{observation}
+
+\begin{definition}
+	Fie functia $f:A \mapsto C$. Se numeste local constanta daca ea este
+	constanta pe fiecare componenta conexa a lui $A$
+\end{definition}
+
+\begin{observation}\leavevmode
+	\begin{enumerate}
+		\item Daca $f \in \mathcal{H}(A)$, atunci $f$ este local constanta
+		$\iff f' \equiv 0$
+		\item Daca avem $A$ domeniu si $f \in \mathcal{H}(A)$, atunci $f$ este
+		local constanta $\iff f$ este constanta
+	\end{enumerate}
+\end{observation}	
+

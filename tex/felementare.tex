@@ -1,0 +1,48 @@
+\section{Functii elementare}
+
+\begin{definition}
+    Constantele, functia identitate, functia exponentiala si cea logasritmica se numesc
+    Functii elementare fundamentale. Functile elementare sunt obtinute din acestea prin
+    aplicarea repetata de un numar finit de ori a operatiilor algebrice
+    ($ + \times : \sqrt{\quad}$) si compunerea cu alte functii elementare.
+\end{definition}
+
+\begin{observation}\leavevmode
+    Functia exponentiala complexa este $f:\C \mapsto \C^*$, unde $f(z):=e^z$ si
+    $e^z:=e^x(\cos y + i\sin y)$ pentru $z=x+iy \in \C$
+
+    Proprietati:
+    
+		\begin{enumerate}
+				\item $f(z_1+z_2) = f(z_1) f(z_2), \forall z_1,z_2\in \C $
+				\item $f(z+2\pi i) = f(z) , z\in \C, k\in \Z $
+				\item $f(-z) = \frac{1}{f(z)}, z \in \C $
+				\item $f$ este olomorfa pe $\C$ si $f^{n}(z) = f(z)
+				,\forall z \in \C, n \in \mathbb{N} $
+    \end{enumerate}    
+\end{observation}
+
+\begin{observation}\leavevmode
+    \begin{enumerate}
+        \item Functia exponentiala este periodica, avand perioada $T=2\pi i$; deci nu
+        este injectiva dacat restransa la intervalul $\alpha, \alpha+2\pi$
+        \[ I = \{z \in \C \colon \alpha < im\,z < \alpha + 2 \pi, \alpha \in \R \} \]
+        \item Consideram $t \in \C^*$. Ecuatia $e^z=t$ are o infinitate de solutii in
+        $\C$. deci, $e^z=t \iff \exists k\in\Z$ astfel incat
+        \[z=\log | t | + i(arg\,t +2k\pi)\]
+        unde $Arg t \in (\-pi, \pi]$ si este argumentul lui $t$
+
+        Stim ca $a=Arg(t)$ este solutia unica din $(-\pi, \pi]$ a ecuatiei
+        \[\cos a + i \sin a = \frac{t}{|t|}\]
+        Din aceste solutii ajungem la aplicatia multivoca logaritm
+        \[\log:\C^*\mapsto \mathcal{P}(\C)\]
+        \[Log(z) = ln\,|z| + i\, arg\,z, z \in \C^*\]
+        iar $Arg: \C^* \mapsto \mathcal{P}(\C)$ este aplicatia multivoca argument
+        unde $Arg(z):= \{arg(z) + 2k \pi \colon k \in \Z\}$
+
+        \item Inversa functiei exponentiale definita pe $\C\setminus(-\infty,0]$ este ramura
+        principala  a aplicatiei $Log$ de mai sus
+        \[log\,z = ln|z| + i arg(z), z\in\C\setminus(-\infty,0]\]
+        \item Functia log este olomorfa pe $\C\setminus(-\infty,0]$
+    \end{enumerate}
+\end{observation}

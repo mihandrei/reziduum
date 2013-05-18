@@ -1,0 +1,70 @@
+\section{Drumuri in \C}
+
+\begin{definition}
+    Numim drum o functie $\gamma : [0,1] \mapsto \C$ continuua,
+    unde $\gamma(0)=z_0$ si se numeste punct initial ,
+    iar $\gamma(1)=z_1$ si se numeste punct final
+\end{definition}
+
+\begin{observation}
+    Daca $z_0=z_1$ , atunci $\gamma$ este un drum inchis
+\end{observation}
+
+\begin{definition}
+    Numim suportul drumului $\gamma$ , imaginea segmentului $[0,1]$ prin $\gamma$,
+    adica $\gamma[0,1]$. Suportul se noteaza cu $\{\gamma\}$, unde
+    $\{\gamma\} := \{\gamma(t) \in \C \colon t\in [0,1]\}$
+\end{definition}
+
+\begin{definition}
+    Numim deformatie continuua a unui drum $\gamma_0:[0,1]\mapsto A$, $A\subset\C$
+    in drumul $\gamma_1:[0,1]\mapsto A$ o functie $\varphi:[0,1]\times[0,1]\mapsto \C$
+    cu proprietatea ca $\varphi(0, t) = \gamma_0(t)$ si $\varphi(1, t)=\gamma_1(t)$
+\end{definition}
+
+\begin{notation}
+    $\mathcal{D}(z_0,z_1)$ drum care porneste din $z_0$ cu varful in $z_1$
+\end{notation}
+
+\begin{definition}
+    Fie $\gamma_0$ si $\gamma_1 \in A$ doua drumuri. Spunem ca $\gamma_0$ este omotop
+    cu $\gamma_1$ (in sens larg) si notam $\gamma_0 TODO \gamma_1$ daca $\exists$ o
+    deformatie continuua in $A$ a lui $\gamma_0$ in $\gamma_1$
+\end{definition}
+
+\begin{definition}
+    Fie $\gamma_0 \in \mathcal{D}(z_0, z_1)$ si $\gamma_1 \in \mathcal{D}(z_1, z_1)$ \\
+    Definim drumul $(\gamma_0 \cup \gamma_1)$ astfel
+    \[
+        (\gamma_0 \cup \gamma_1)(t) =
+        \left \{
+		    \begin{aligned}
+                \gamma_1(2t), t \in \left[0,\frac{1}{2}\right] \\
+                \gamma_2(2t-1), t \in \left[\frac{1}{2},1\right]
+	       	\end{aligned}
+        \right .
+    \]
+    Acesta se numeste compunerea drumului $\gamma_0$ cu $\gamma_1$
+\end{definition}
+
+
+\begin{definition}
+    Fie $\gamma$ drum din $\mathcal{D_{A}}(z_0,z_1)$ , iar $\gamma^-$ din
+    $\mathcal{D}(z_1,z_0)$. Atunci $\gamma^-(t) = \gamma(1-t), t\in[0,1]$ si
+    se numeste inversul drumului $\gamma$
+\end{definition}
+
+\begin{definition}
+    Fie $z\in A$, iar $e_z(t)=z$ pt $t\in[0,1]$. Spunem ca $\gamma \in
+    \mathcal{D_{A}}(z,z)$ este omotop cu zero daca $\gamma TODO e_z$
+\end{definition}
+
+\begin{definition}
+    Un domeniu $D$ se numeste simplu conex daca $\forall$ drum inchis din acest
+     domeniu este omotop cu zero in $D$
+\end{definition}
+
+\begin{observation}
+    Daca $D$ este un domeniu din $\C$ stelat fata de unul dintre punctele sale,
+    atunci spunem despre $D$ ca este simplu conex
+\end{observation}
