@@ -1,0 +1,83 @@
+\section{Teorema Reziduurilor}
+
+\begin{theorem}
+    Fie functia $f\in \mathcal{H}(G)$, unde $G \subset \C$ multime deschisa.
+		Notam cu $\rho$  mutimea tuturor punctelor singulare izolate ale lui $f$
+    Fie $\widetilde{G}:=G \cup S $, iar $\gamma$ un contur in $G$ omotop cu zero in $\widetilde{G}$
+    \begin{align*}
+			\text{Atunci suma: } &\sum_{z \in \widetilde{G}} {n(\gamma;z) Rez(f;z)} \text{ este finita si}  \\
+			\int_{\gamma} f(z) \mathrm{d}z = 2\pi i &\sum_{z \in \widetilde{G}} n(\gamma;z) Rez(f;z)
+    \end{align*}
+    \begin{proof}
+        $\exists \varphi:[0;1]^2 \mapsto G$ deformare continuua,
+        $k = \varphi ([0;1]^2) \subset \widetilde{G}$ compact.
+
+				Fie
+        \begin{align*}
+            r &:= \frac{1}{2} \mathrm{d} \left(k, \C \setminus \widetilde{G}\right)
+            \\
+            D &:= \bigcup_{z\in k} \mathcal{U}(z;r)
+        \end{align*}
+
+        $k \subset D \subset \overline{D} \subset \widetilde{G}$
+
+        $\gamma$ omotop cu $0$ in $D$
+
+        $\overline{D} \cap \rho$ finita
+				$\implies \exists \{b_1, \dotsc, b_k \} = \overline{D} \cap \rho$
+
+        Fie $\Pi_{k}(z)$ partea principala a dezvoltarii lui $f$ in $b_k$
+
+			  Deci, functia $\displaystyle g := f - \sum_{k=1}^{n} \Pi_k$
+				olomorfa mai putin in $b_k$ admite o prelungire olomorfa $g_1$ la $D$ .
+        \begin{align*}
+            \int_{\gamma}  g &= \int_{\gamma} g_1 = 0 \\
+                           g &= g_1 |_{D=\{b_1, \dotsc, b_k\}}\\
+            \implies \int_{\gamma} f &= \sum_{k=1}^{n} \int_{\gamma} \Pi_k
+        \end{align*}
+
+        Calculam
+				\[
+					\int_{\gamma} \Pi_k \text{ , unde }
+					\Pi_k(z) = \sum_{m=1}^{\infty} \frac{a^{(k)} - m }{(z - b_k)^m}
+				\]
+
+        Seria este uniform convergenta pe $\forall$ parte compacta din
+				$\C \setminus \{b_a \} \implies$ uniform convergenta pe
+				$\{ \gamma \} \implies$ putem integra termen cu termen si
+        \[
+            \int_{\gamma} \frac{\mathrm{d}}{z-b_k} m = 0 , \forall m>1
+        \]
+        Functia $\displaystyle \frac{1}{(z-b_n)^m}$ admite primitiva si
+        $\displaystyle
+            \int_{\gamma} \frac{\mathrm{d}z} {z - b_k} = 2 \pi i \cdot n(\gamma;b_n) \cdot a_{-1}^{(k)}
+        $ deci
+        \[
+					\int_{\gamma} f = 2 \pi i \sum_{k=1}{n} n(\gamma; b_k) Rez(f;b_n)
+        \]
+
+				Trebuie sa mai aratam ca
+				$\forall z_0 \in \widetilde{G} \setminus(D \cap \rho) \colon n(\gamma; z_0)\cdot Rez(f;z_0) = 0$
+
+        Intr-adevar, daca pentru
+				$z_0\in \widetilde{G} \setminus (D\cap\rho)$ avem
+				$Rez(f;z_0) \neq 0 \implies z_0 \in \rho $, deci $z_0\notin D$ si
+        \[
+            n(\gamma;z_0) = \frac{1}{2 \pi i} \int_{\gamma}
+            \frac{\mathrm{d} \xi}{\xi - z_0} = 0
+        \]
+        caci $h(\xi) = \frac{1}{\xi - z_0}$ olomorfa pe $D$ si $\gamma$ omotop cu zero
+        \[
+            \implies \int_{\gamma} f = 2 \pi i \sum_{z\in \widetilde{G}} n(\gamma;z) \cdot Rez(f;z)
+        \]
+
+    \end{proof}
+\end{theorem}
+
+\section{Puncte singulare izolate}
+
+\begin{definition}
+    Fie $G\subset \C$ multime deschisa si $f\in\mathcal{H}(G)$. Punctul $z_0 \in \C$ se numeste punct singular izolat pentru functia $f$ daca $z_0 \notin G$, dar
+    $\exists p>0$ a.i
+    $\mathcal{\dot{U}}(z_0;p)\subset G \implies f \in \mathcal{H}(\mathcal{\dot{U}}(z_0;p))$
+\end{definition}
