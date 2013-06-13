@@ -151,16 +151,16 @@
             \int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x &=
                 \int_{\partial \mathcal{U}(0;1)}
                     R\left(\frac{z-\frac{1}{z}}{2i}, \frac{z+\frac{1}{z}}{2} \right)
-                \frac{\mathrm{d} z}{iz}            
-            \implies 
+                \frac{\mathrm{d} z}{iz}
+            \implies
 						\\
-						\int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x 
-							&= -i \int_{\partial \mathcal{U}(0;1)} f(z) \mathrm{d}z            
+						\int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x
+							&= -i \int_{\partial \mathcal{U}(0;1)} f(z) \mathrm{d}z
             \overset{T.Rez}{\implies}
 						\\
 						\int_{\partial \mathcal{U}(0;1)} f(z) \mathrm{d}z &=
-                2\pi i \sum_{|z|<1} Rez(f;z)            
-            \implies 
+                2\pi i \sum_{|z|<1} Rez(f;z)
+            \implies
 						\\
 						\int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x &=
                 2\pi \sum_{|z|<1} Rez(f;z)
@@ -183,6 +183,57 @@
         $\exists M,r_1 >0 $ a.i
         \[
             \left|\frac{P(x)}{Q(x)} \right| \leq \frac{M}{|x|^2} , \quad |x| \geq r_1
+        \]
+        \[
+            \int_{r_1}^{\infty} \frac{1}{x^2} \mathrm{d} x \text{ converge } \implies
+            \int_{r_1}^{\infty} \frac{P(x)}{Q(x)} \mathrm{d} x \text{ converge }
+        \]
+        Analog
+        \[
+           \int_{ - \infty}^{- r_1} \frac{P(x)}{Q(x)} \mathrm{d} x \text{ converge }
+        \]
+
+				\[
+					\text{Dar } \frac{P}{Q} \text{ continuua pe } [- r_1, r_1] \implies
+            \exists \int_{- r_1}^{r_1} \frac{P(x)}{Q(x)} \mathrm{d} x
+				\]
+
+        \[
+            \int_{- \infty}^{0} \frac{P(x)}{Q(x)} \mathrm{d} x \text{ si }
+            \int_{0}^{\infty} \frac{P(x)}{Q(x)} \mathrm{d} x \text{ converg } \implies
+            \int_{- \infty}^{\infty} \frac{P(x)}{Q(x)} \mathrm{d} x \text{ converge }
+        \]
+
+        Fie $r>0$ suficient de mare astfel incat toti polii lui $f$ din semiplanul
+        superior sa fie continuti in $\Omega_r$, unde $\Omega_r = \{z\in\C \colon |z| < r,\quad Im z > 0\}$ .
+       
+				Fie $\gamma_r(t) = r e^{\pi i t}, t\in[0;1], \gamma=[-r;r]\cup \gamma_r$.
+        
+				Atunci $\gamma = \partial \Omega_r$, iar $(\gamma) = \Omega_r$
+        $\overset{T. Rez}{\implies}$
+
+        \begin{equation*}
+            \int_{\gamma} f(z) \mathrm{d} z = 2 \pi i \sum_{z \in \Omega_r} Rez(f;z)
+                = 2 \pi i \sum_{Im z >0} Rez(f;z)  \qquad (*)
+        \end{equation*}
+
+        Pe de alta parte
+        \begin{equation*}
+            \int_{\gamma} f(z) \mathrm{d} z = \int_{\gamma_r} f(z) \mathrm{d} z + \int_{-r}^{r} f(x) \mathrm{d} x \qquad (**)
+        \end{equation*}
+
+        Din $(*)$ si $(**)$ trecand la limita $\implies$
+
+        \[
+            2 \pi i \sum_{Im z >0} Rez(f;z) = \lim_{r\to \infty} \int_{\gamma_r} f(z) \mathrm{d} z
+                + \int_{- \infty}^{\infty} f(x) \mathrm{d} x
+        \]
+
+        \[
+            \text{Dar, } \lim_{z\to\infty} z f(z)=0 \implies \lim_{r\to\infty} \int_{\gamma_r} f(z) \mathrm{d} z = 0
+        \]
+        \[
+            \implies \int_{- \infty}^{\infty} f(x) \mathrm{d} x = 2 \pi i \sum_{Im z >0} Rez(f;z)
         \]
     \end{proof}
 \end{tip}
