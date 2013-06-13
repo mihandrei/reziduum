@@ -2,17 +2,20 @@
 
 \begin{theorem}
     Fie functia $f\in \mathcal{H}(G)$, unde $G \subset \C$ multime deschisa.
-		Notam cu $\rho$  mutimea tuturor punctelor singulare izolate ale lui $f$
-    Fie $\widetilde{G}:=G \cup S $, iar $\gamma$ un contur in $G$ omotop cu zero in $\widetilde{G}$
+    Notam cu $\rho$  mutimea tuturor punctelor singulare izolate ale lui $f$
+    Fie $\widetilde{G}:=G \cup S $, iar $\gamma$ un contur in $G$ omotop cu zero
+     in $\widetilde{G}$
     \begin{align*}
-			\text{Atunci suma: } &\sum_{z \in \widetilde{G}} {n(\gamma;z) Rez(f;z)} \text{ este finita si}  \\
-			\int_{\gamma} f(z) \mathrm{d}z = 2\pi i &\sum_{z \in \widetilde{G}} n(\gamma;z) Rez(f;z)
+        \text{Atunci suma: }
+        &\sum_{z \in \widetilde{G}} {n(\gamma;z) Rez(f;z)}
+        \text{ este finita si}  \\
+        \int_{\gamma} f(z) \mathrm{d}z = 2\pi i &\sum_{z \in \widetilde{G}} n(\gamma;z) Rez(f;z)
     \end{align*}
     \begin{proof}
         $\exists \varphi:[0;1]^2 \mapsto G$ deformare continuua,
         $k = \varphi ([0;1]^2) \subset \widetilde{G}$ compact.
 
-				Fie
+        Fie
         \begin{align*}
             r &:= \frac{1}{2} \mathrm{d} \left(k, \C \setminus \widetilde{G}\right)
             \\
@@ -24,12 +27,12 @@
         $\gamma$ omotop cu $0$ in $D$
 
         $\overline{D} \cap \rho$ finita
-				$\implies \exists \{b_1, \dotsc, b_k \} = \overline{D} \cap \rho$
+                $\implies \exists \{b_1, \dotsc, b_k \} = \overline{D} \cap \rho$
 
         Fie $\Pi_{k}(z)$ partea principala a dezvoltarii lui $f$ in $b_k$
 
-			  Deci, functia $\displaystyle g := f - \sum_{k=1}^{n} \Pi_k$
-				olomorfa mai putin in $b_k$ admite o prelungire olomorfa $g_1$ la $D$ .
+        Deci, functia $\displaystyle g := f - \sum_{k=1}^{n} \Pi_k$
+        olomorfa mai putin in $b_k$ admite o prelungire olomorfa $g_1$ la $D$ .
         \begin{align*}
             \int_{\gamma}  g &= \int_{\gamma} g_1 = 0 \\
                            g &= g_1 |_{D=\{b_1, \dotsc, b_k\}}\\
@@ -37,14 +40,14 @@
         \end{align*}
 
         Calculam
-				\[
-					\int_{\gamma} \Pi_k \text{ , unde }
-					\Pi_k(z) = \sum_{m=1}^{\infty} \frac{a^{(k)} - m }{(z - b_k)^m}
-				\]
+        \[
+            \int_{\gamma} \Pi_k \text{ , unde }
+            \Pi_k(z) = \sum_{m=1}^{\infty} \frac{a^{(k)} - m }{(z - b_k)^m}
+        \]
 
         Seria este uniform convergenta pe $\forall$ parte compacta din
-				$\C \setminus \{b_a \} \implies$ uniform convergenta pe
-				$\{ \gamma \} \implies$ putem integra termen cu termen si
+        $\C \setminus \{b_a \} \implies$ uniform convergenta pe
+        $\{ \gamma \} \implies$ putem integra termen cu termen si
         \[
             \int_{\gamma} \frac{\mathrm{d}}{z-b_k} m = 0 , \forall m>1
         \]
@@ -53,15 +56,15 @@
             \int_{\gamma} \frac{\mathrm{d}z} {z - b_k} = 2 \pi i \cdot n(\gamma;b_n) \cdot a_{-1}^{(k)}
         $ deci
         \[
-					\int_{\gamma} f = 2 \pi i \sum_{k=1}{n} n(\gamma; b_k) Rez(f;b_n)
+            \int_{\gamma} f = 2 \pi i \sum_{k=1}{n} n(\gamma; b_k) Rez(f;b_n)
         \]
 
-				Trebuie sa mai aratam ca
-				$\forall z_0 \in \widetilde{G} \setminus(D \cap \rho) \colon n(\gamma; z_0)\cdot Rez(f;z_0) = 0$
+        Trebuie sa mai aratam ca $\forall z_0 \in \widetilde{G} \setminus(D \cap \rho)
+        \colon n(\gamma; z_0)\cdot Rez(f;z_0) = 0$
 
         Intr-adevar, daca pentru
-				$z_0\in \widetilde{G} \setminus (D\cap\rho)$ avem
-				$Rez(f;z_0) \neq 0 \implies z_0 \in \rho $, deci $z_0\notin D$ si
+        $z_0\in \widetilde{G} \setminus (D\cap\rho)$ avem
+        $Rez(f;z_0) \neq 0 \implies z_0 \in \rho $, deci $z_0\notin D$ si
         \[
             n(\gamma;z_0) = \frac{1}{2 \pi i} \int_{\gamma}
             \frac{\mathrm{d} \xi}{\xi - z_0} = 0
@@ -77,7 +80,109 @@
 \section{Puncte singulare izolate}
 
 \begin{definition}
-    Fie $G\subset \C$ multime deschisa si $f\in\mathcal{H}(G)$. Punctul $z_0 \in \C$ se numeste punct singular izolat pentru functia $f$ daca $z_0 \notin G$, dar
+    Fie $G\subset \C$ multime deschisa si $f\in\mathcal{H}(G)$. Punctul $z_0 \in \C$
+    se numeste punct singular izolat pentru functia $f$ daca $z_0 \notin G$, dar
     $\exists p>0$ a.i
     $\mathcal{\dot{U}}(z_0;p)\subset G \implies f \in \mathcal{H}(\mathcal{\dot{U}}(z_0;p))$
 \end{definition}
+
+\begin{observation}
+    De exemplu functiile $\frac{\sin(z)}{z}$ , $\frac{1}{z}$, $e^{\frac{1}{z}}$
+    au singularitati izolate in $z=0$
+\end{observation}
+
+\begin{observation}
+    Daca $z_0$ este un punct singular izolat pentru $f\in\mathcal{H}(G)$, iar
+    $p>0$ a.i $\mathcal{\dot{U}}(z_0;p)\subset G$ , atunci $f$ admite o dezvoltare in
+    serie Laurent de forma
+    \[
+        f(z) = \sum_{k=-\infty}^{\infty} a_{k}(z-z_0)^{k},\quad z\in \mathcal{\dot{U}}(z_0;p)
+    \]
+    Coeficientul $a_{-1}$ al termenului $(z-z_0)^{-1}$ se numeste reziduul functiei $f$
+    in $z_0$ si se noteaza cu $a_{-1} = Rez(f;z_0)$
+\end{observation}
+
+\begin{definition}
+    Fie $G \subset \C$ multime deschisa, $f\in\mathcal{H}(G)$ , iar $z_0$ punct singular
+    izolat al functiei $f$. Spunem ca:
+    \begin{enumerate}
+        \item  $z_0$ este punct eliminabil daca $f$ se extinde olomorf la $\Omega \cup \{z_0\}$
+        \item  $z_0$ este pol daca $lim_{z \to z_0} f(z) = \infty$
+        \item  $z_0$ este punct esential izolat daca $\nexists$ limita a lui $f$ in $z_0$
+        \item Un punct $z$ este regular pentru $f$ daca $z$ este eliminabil pentru $f$
+        sau $f$ este derivabila in $z$
+    \end{enumerate}
+\end{definition}
+
+\section{Calcularea reziduului intr-un pol}
+\begin{enumerate}
+    \item Daca $z_0$ este un pol de ordin $k$ pentru $f$ atunci
+    \[
+    Rez(f;z_0) = \frac{1}{(k-1)!}\lim_{z \to z_0} \left[(z-z_0)^k f(z) \right]^{(k-1)}
+    \]
+    \item In cazul unui punct singular esential reziduul se calculeaza cu ajutoril dezvoltarii
+    in serie Laurent
+    \item Intr-un punct regular reziduul este 0
+\end{enumerate}
+
+\section{Aplicatii ale teoriei reziduurilor la calculul unor integrale definite reale}
+
+% tre sa fie tipul 1
+\begin{tip}[1]
+    Fie integrala $\displaystyle I=\int_{0}^{2\pi} R(\sin x, \cos x) \mathrm{d} x$, unde
+    $R(u,v)$ este o functie rationala reala ce nu are poli pe cercul $u^2+v^2=1$
+
+	\[
+        \text{Atunci } \int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x =
+        2\pi i \sum_{z\in \mathcal{U}(0;1)} Rez(f;z)
+    \]
+    \[
+        \text{unde } f(z) = \frac{1}{z} R\left(\frac{z-\frac{1}{z}}{2i}, \frac{z+\frac{1}{z}}{2} \right)
+    \]
+
+    \begin{proof}
+        Utilizand formulele lui Euler:
+        \[
+            \cos x = \frac{e^{ix}+e^{-ix}}{2}, \sin x = \frac{e^{ix}-e^{-ix}}{2i} x \in \R
+        \]
+        si substitutia $e^{ix}=z$, avem ca
+
+        \begin{align*}
+            \int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x &=
+                \int_{\partial \mathcal{U}(0;1)}
+                    R\left(\frac{z-\frac{1}{z}}{2i}, \frac{z+\frac{1}{z}}{2} \right)
+                \frac{\mathrm{d} z}{iz}            
+            \implies 
+						\\
+						\int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x 
+							&= -i \int_{\partial \mathcal{U}(0;1)} f(z) \mathrm{d}z            
+            \overset{T.Rez}{\implies}
+						\\
+						\int_{\partial \mathcal{U}(0;1)} f(z) \mathrm{d}z &=
+                2\pi i \sum_{|z|<1} Rez(f;z)            
+            \implies 
+						\\
+						\int_{0}^{2\pi} R(\sin x , \cos x) \mathrm{d} x &=
+                2\pi \sum_{|z|<1} Rez(f;z)
+        \end{align*}
+
+
+    \end{proof}
+\end{tip}
+
+
+\begin{tip}
+    Fie $R$ o functie rationala reala , $R=P\setminus Q$ unde $P$ si $Q$ polinoame de
+    grad $n$ , respectiv $m$, $Q(x)\neq 0 \forall x\in \R$,
+    $lim_{z\to\infty} z f(z) =0, (n \leq m-2)$
+    Atunci ,
+    \[
+        \int_{-\infty}^{\infty} R(x) \mathrm{d} x = 2\pi i \sum_{Im z = 0} Rez(f;z)
+    \]
+    \begin{proof}
+        $\exists M,r_1 >0 $ a.i
+        \[
+            \left|\frac{P(x)}{Q(x)} \right| \leq \frac{M}{|x|^2} , \quad |x| \geq r_1
+        \]
+    \end{proof}
+\end{tip}
