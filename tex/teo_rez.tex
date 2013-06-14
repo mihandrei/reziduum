@@ -393,3 +393,73 @@
     \end{proof}
 
 \end{tip}
+
+\begin{aplicatie}[1]
+    Sa se calculeze integrala
+    \[
+    I = \int_{-\infty}^{\infty} \frac{\dd x}{a^4+x^4}
+    \]
+    \begin{proof}
+
+    Este o integrala de tipul II
+    \begin{align*}
+        &\left .
+            \begin{aligned}
+                P(x) &= 1 \\
+                Q(x) &= a^4 +x^4
+            \end{aligned}
+        \right \}
+        grad\; Q > grad\; P+2 \\
+        & f(z) = \frac{a}{a^4 +x^4}
+    \end{align*}
+    \[
+        a^4 +x^4 = 0 \implies z^4 = -a^4 = a^4 (\cos \pi + i\sin \pi)
+    \]
+    \[
+        \implies z_k = a \left( \cos \frac{\pi+2k\pi}{4} + i \sin \frac{\pi+2k\pi}{4} \right)
+            , k=\overline{0,3}
+    \]
+    \begin{align*}
+        z_0 &= a \left(\frac{\sqrt 2}{2} + i\frac{\sqrt 2}{2} \right)
+            = \frac{a}{\sqrt 2} (1+i) \\
+        z_1 &= \frac{a}{\sqrt 2} (-1+i) \\
+        z_2 &= \frac{a}{\sqrt 2} (-1-i) \\
+        z_3 &= \frac{a}{\sqrt 2} (1-i)
+    \end{align*}
+    \[
+        I = 2 \pi i \sum_{Im \; z_k >0} Rez(f;z_k)
+    \]
+    \[
+        \implies I = 2 \pi i [Rez(f;z_0) + Rez(f;z_1)]
+    \]
+    \[
+        Rez(f;z_k) = \lim_{z \to z_k} (z-z_k) \frac{1}{z^4+a^4}
+            \overset{\frac{0}{0}}{\underset{\mathrm{U H}}{=}}
+            \lim_{z \to z_k} \frac{1}{4z^3}
+            = - \frac{z_k}{4a^4}
+    \]
+    Deci,
+    \[
+        I = 2 \pi i \left[ \frac{a}{\sqrt 2} (1+i -1 +i) \right]
+            = \frac{2 \pi i \cdot a \cdot 2i}{\sqrt 2}
+            \implies I = - \frac{4 \pi a}{\sqrt 2}
+    \]
+    \end{proof}
+\end{aplicatie}
+
+\begin{aplicatie}
+    Sa se calculeze integrala
+    \[
+        I = \int_{-\infty}^{\infty} \frac{\cos x}{x^2+a^2} \dd x, \text{ unde } a>0
+    \]
+    \begin{proof}
+        Este o integrala de tip III:
+        \begin{align*}
+            \text{Fie } I_1 &= \int_{-\infty}^{\infty} \frac{\cos x}{x^2+a^2} \dd x \\
+            \text{si }  I_2 &= \int_{-\infty}^{\infty} \frac{\sin x}{x^2+a^2} \dd x (= 0 \text{ pe ca e impara}) \\
+            \text{ si fie } I &= I_1+I_2 \\
+            \implies I &= \int_{-\infty}^{\infty} \frac{e^{ix}}{x^2+a^2} \dd x
+        \end{align*}
+
+    \end{proof}
+\end{aplicatie}

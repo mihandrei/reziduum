@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"over",
+				"overset"
+			],
+			[
+				"di",
+				"displaystyle"
+			],
+			[
+				"Ome",
+				"Omega_r"
+			],
+			[
+				"math",
+				"mathrm"
+			],
+			[
+				"enum",
+				"enumerate"
+			],
+			[
+				"int",
+				"infty"
+			],
+			[
 				"in",
 				"infty"
 			],
@@ -308,10 +332,6 @@
 				"border-bottom"
 			],
 			[
-				"di",
-				"display"
-			],
-			[
 				"leftw",
 				"leftwidth"
 			],
@@ -494,26 +514,6 @@
 			[
 				"new",
 				"newfile_name"
-			],
-			[
-				"mar",
-				"margin-left"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
-				"c",
-				"CLEANUP"
-			],
-			[
-				"exce",
-				"exceptions"
-			],
-			[
-				"deco",
-				"deco2"
 			]
 		]
 	},
@@ -547,7 +547,7 @@
 			"file": "rezstyle.sty",
 			"settings":
 			{
-				"buffer_size": 576,
+				"buffer_size": 634,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +555,7 @@
 			"file": "trez.tex",
 			"settings":
 			{
-				"buffer_size": 530,
+				"buffer_size": 534,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +563,7 @@
 			"file": "tex/teo_rez.tex",
 			"settings":
 			{
-				"buffer_size": 3299,
+				"buffer_size": 14590,
 				"line_ending": "Unix"
 			}
 		}
@@ -768,6 +768,8 @@
 	},
 	"file_history":
 	[
+		"/D/GitHub/reziduum/tex/teo_rez.log",
+		"/D/GitHub/reziduum/tex/teo_rez.tex",
 		"/D/GitHub/reziduum/tex/felementare.tex",
 		"/D/GitHub/reziduum/tex/felementare.log",
 		"/D/GitHub/reziduum/reziduum.tex",
@@ -893,9 +895,7 @@
 		"/D/home/mihai/.ssh/known_hosts",
 		"/D/$Lmb49Cn",
 		"/D/GitHub/hmft/src/hmft/hmft.web/Web/design/flatstrap/font-awesome.less",
-		"/D/GitHub/hmft/src/hmft/hmft.web/Web/design/test/register.html",
-		"/D/GitHub/hmft/src/hmft/hmft.web/Web/design/flatstrap/dropdowns.less",
-		"/D/GitHub/hmft/src/hmft/hmft.web/Web/design/flatstrap/buttons.less"
+		"/D/GitHub/hmft/src/hmft/hmft.web/Web/design/test/register.html"
 	],
 	"find":
 	{
@@ -903,7 +903,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"*.tex",
@@ -930,6 +930,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\mathrm{d}",
+			"\\xsi",
+			"dis",
+			"x",
+			"T.rez",
+			"lim_",
+			"sin",
+			"obs",
 			"colo",
 			"\\dots",
 			"|_",
@@ -1049,15 +1057,7 @@
 			"text\\S*shadow",
 			"text-shadow",
 			"success",
-			"shadow",
-			"act",
-			"dropdown-menu",
-			"multiple",
-			"AddFiles",
-			"System.DateTime",
-			"transfer-files",
-			"date",
-			"transfer-files"
+			"shadow"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1084,7 +1084,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -1099,8 +1099,8 @@
 						"selection":
 						[
 							[
-								2008,
-								2008
+								3065,
+								3065
 							]
 						],
 						"settings":
@@ -1203,7 +1203,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1441.0,
+						"translation.y": 1628.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1320,7 +1320,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 341.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1337,8 +1337,8 @@
 						"selection":
 						[
 							[
-								862,
-								862
+								68,
+								68
 							]
 						],
 						"settings":
@@ -1442,7 +1442,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 226.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1452,15 +1452,15 @@
 					"file": "rezstyle.sty",
 					"settings":
 					{
-						"buffer_size": 576,
+						"buffer_size": 634,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								576,
-								576
+								546,
+								546
 							]
 						],
 						"settings":
@@ -1562,27 +1562,21 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 4,
 					"file": "trez.tex",
 					"settings":
 					{
-						"buffer_size": 530,
+						"buffer_size": 534,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								441,
-								430
+								300,
+								300
 							]
 						],
 						"settings":
@@ -1690,15 +1684,15 @@
 					"file": "tex/teo_rez.tex",
 					"settings":
 					{
-						"buffer_size": 3299,
+						"buffer_size": 14590,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3283,
-								3283
+								14169,
+								14169
 							]
 						],
 						"settings":
@@ -1793,10 +1787,12 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1134.0,
+						"translation.y": 6859.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1821,18 +1817,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.385065885798,
 			1.0
 		],
 		"rows":
@@ -1864,6 +1853,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"teo",
+				"tex/teo_rez.tex"
+			],
 			[
 				"dru",
 				"tex/drumuri.tex"
