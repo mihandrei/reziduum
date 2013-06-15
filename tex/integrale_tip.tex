@@ -1,0 +1,268 @@
+\section{Aplicatii ale teoriei reziduurilor la calculul unor integrale definite reale}
+
+% tre sa fie tipul 1
+\begin{tip}[1]
+    Fie integrala $\displaystyle I=\int_{0}^{2\pi} R(\sin x, \cos x) \dd x$, unde
+    $R(u,v)$ este o functie rationala reala ce nu are poli pe cercul $u^2+v^2=1$
+
+    \[
+        \text{Atunci } \int_{0}^{2\pi} R(\sin x , \cos x) \dd x =
+        2\pi i \sum_{z\in \mathcal{U}(0;1)} \Rez(f;z)
+    \]
+    \[
+        \text{unde } f(z) = \frac{1}{z} R\left(\frac{z-\frac{1}{z}}{2i},\; \frac{z+\frac{1}{z}}{2} \right)
+    \]
+
+    \begin{proof}
+        Utilizand formulele lui Euler:
+        \[
+            \cos x = \frac{e^{ix}+e^{-ix}}{2}\; ,\quad \sin x = \frac{e^{ix}-e^{-ix}}{2i} x \in \R
+        \]
+        si substitutia $e^{ix}=z$, avem ca
+
+        \begin{align*}
+            \int_{0}^{2\pi} R(\sin x , \cos x) \dd x &=
+                \int_{\partial \mathcal{U}(0;1)}
+                    R\left(\frac{z-\frac{1}{z}}{2i}, \frac{z+\frac{1}{z}}{2} \right)
+                \frac{\dd z}{iz}
+            \implies
+                        \\
+                        \int_{0}^{2\pi} R(\sin x , \cos x) \dd x
+                            &= -i \int_{\partial \mathcal{U}(0;1)} f(z) \dd z
+            \overset{T.Rez}{\implies}
+                        \\
+                        \int_{\partial \mathcal{U}(0;1)} f(z) \dd z &=
+                2\pi i \sum_{|z|<1} \Rez(f;z)
+            \implies
+                        \\
+                        \int_{0}^{2\pi} R(\sin x , \cos x) \dd x &=
+                2\pi \sum_{|z|<1} \Rez(f;z)
+        \end{align*}
+
+
+    \end{proof}
+\end{tip}
+
+
+\begin{tip}
+    Fie $R$ o functie rationala reala , $R=P / Q$ unde $P$ si $Q$ polinoame de
+    grad $n$ , respectiv $m$, $Q(x)\neq 0 \quad \forall x\in \R$,
+    $\displaystyle \lim_{z\to\infty} z f(z) =0, (n \leq m-2)$
+
+        Atunci
+    \[
+        \int_{-\infty}^{\infty} R(x) \dd x = 2\pi i \sum_{\Ima z = 0} \Rez(f;z)
+    \]
+    \begin{proof}
+        $\exists M,r_1 >0 $ a.i
+        \[
+            \left|\frac{P(x)}{Q(x)} \right| \leq \frac{M}{|x|^2} , \quad |x| \geq r_1
+        \]
+        \[
+            \int_{r_1}^{\infty} \frac{1}{x^2} \dd x \text{ converge } \implies
+            \int_{r_1}^{\infty} \frac{P(x)}{Q(x)} \dd x \text{ converge }
+        \]
+        Analog
+        \[
+           \int_{ - \infty}^{- r_1} \frac{P(x)}{Q(x)} \dd x \text{ converge }
+        \]
+
+                \[
+                    \text{Dar } \frac{P}{Q} \text{ continuua pe } [- r_1, r_1] \implies
+            \exists \int_{- r_1}^{r_1} \frac{P(x)}{Q(x)} \dd x
+                \]
+
+        \[
+            \int_{- \infty}^{0} \frac{P(x)}{Q(x)} \dd x \text{ si }
+            \int_{0}^{\infty} \frac{P(x)}{Q(x)} \dd x \text{ converg } \implies
+            \int_{- \infty}^{\infty} \frac{P(x)}{Q(x)} \dd x \text{ converge }
+        \]
+
+        Fie $r>0$ suficient de mare astfel incat toti polii lui $f$ din semiplanul
+        superior sa fie continuti in $\Omega_r$, unde $\Omega_r = \{z\in\C \colon |z| < r,\quad \Ima z > 0\}$ .
+
+                Fie $\gamma_r(t) = r e^{\pi i t}, t\in[0;1], \gamma=[-r;r]\cup \gamma_r$.
+
+                Atunci $\gamma = \partial \Omega_r$, iar $(\gamma) = \Omega_r$
+        $\overset{T. Rez}{\implies}$
+
+        \begin{equation*}
+            \int_{\gamma} f(z) \dd z = 2 \pi i \sum_{z \in \Omega_r} \Rez(f;z)
+                = 2 \pi i \sum_{\Ima z >0} \Rez(f;z)  \qquad (*)
+        \end{equation*}
+
+        Pe de alta parte
+        \begin{equation*}
+            \int_{\gamma} f(z) \dd z = \int_{\gamma_r} f(z) \dd z + \int_{-r}^{r} f(x) \dd x \qquad (**)
+        \end{equation*}
+
+        Din $(*)$ si $(**)$ trecand la limita $\implies$
+
+        \[
+            2 \pi i \sum_{\Ima z >0} \Rez(f;z) = \lim_{r\to \infty} \int_{\gamma_r} f(z) \dd z
+                + \int_{- \infty}^{\infty} f(x) \dd x
+        \]
+
+        \[
+            \text{Dar, } \lim_{z\to\infty} z f(z)=0 \implies \lim_{r\to\infty} \int_{\gamma_r} f(z) \dd z = 0
+        \]
+        \[
+            \implies \int_{- \infty}^{\infty} f(x) \dd x = 2 \pi i \sum_{\Ima z >0} \Rez(f;z)
+        \]
+    \end{proof}
+\end{tip}
+
+
+\begin{tip}
+    Fie $R$ o functie rationala reala de forma
+             $\displaystyle R = \frac{P}{Q}$,
+             $Q(x) \neq 0$ ,
+             $ x \in \R$ ,
+             grad $Q >$ grad  $P+1$ si
+             $\displaystyle \lim_{|z|\to\infty} R(z) = 0  $
+
+             Atunci
+             \[
+                    \int_{- \infty}^{\infty} R(x) e^{ix} \dd x \text{ converge si}
+                    \int_{- \infty}^{\infty} R(x) e^{ix} \dd x = 2 \pi i \sum_{\Ima z >0} \Rez(f;z)
+              \]
+            unde $f(z) = R(z) e^{iz}$ .
+
+    \begin{proof}
+        Fie $r>0$ suficient de mare a.i. toti polii functiei $f$ din semiplanul superior
+        sa fie continuti in $D$, unde $D=\{z\in\C \colon |z| < r ;\ \Ima\ z >0\}$
+
+        Fie $C = \partial D \implies C = [-r;r] \cup \gamma_r$
+        \[
+            \overset{T.\Rez}{\implies} \int_{C} f(z) \dd z = 2 \pi i \sum_{\Ima\ z >0} \Rez(f;z)
+        \]
+
+        \begin{displaymath}
+            \left.
+                \begin{aligned}
+                    \text{Dar } \int_{C} f(z) \dd z
+                        = \int_{-r}{r} f(x) \dd x + \int_{\gamma_r} f(z) \dd z \\
+                        r \to \infty
+                \end{aligned}
+            \right \}
+            \implies
+        \end{displaymath}
+
+        \begin{align*}
+            \implies 2\pi i \sum_{\Ima\ z >0 } \Rez(f;z)
+                &= \int_{-\infty}{\infty} f(x) dx + \lim_{r\to\infty} \int_{\gamma_r} f(z) \dd z
+            \\
+                &= \int_{-\infty}^{\infty} \frac{P(x)}{Q(x)} e^{ix} \dd x
+                   + \lim_{r\to\infty} \int_{\gamma_r} \frac{P(z)}{Q(z)} e^{iz} \dd z
+        \end{align*}
+
+        \[
+            g(z) = \frac{P(z)}{Q(z)}
+        \]
+        deci,
+        \[
+            \lim_{z\to\infty}g(z) = 0 \overset{L.Jordan}{\implies}
+            \lim_{r\to\infty} \int_{\gamma_r} g(z) e^{iz} \dd z = 0
+        \]
+        Asadar,
+        \[
+            \int_{-\infty}^{\infty} \frac{P(x)}{Q(x)} e^{ix} \dd x
+                =2 \pi i \sum_{\Ima\ z >0} \Rez(f;z)
+        \]
+    \end{proof}
+\end{tip}
+
+\begin{tip}
+    Fie integrala
+    \[
+        I = \int_{-\infty}^{\infty} f(x) e^{i \alpha x}\dd x
+    \]
+    unde $f=P/Q$ , $Q(x)\neq 0$ , $x \in \R$ , $grad\ P = k$ , $grad\ Q =p$,
+    iar $p \geq k+1$ .
+
+    Daca $\alpha > 0$, atunci:
+    \[
+        I = \int_{-\infty}^{\infty} f(x) e^{i \alpha x}\dd x
+            =2 \pi i \sum_{\Ima\ z >0} \Rez(g;z)
+    \]
+    , unde $g(z) = f(z) e^{i \alpha z}$.
+
+    \begin{proof}
+        Observam ca
+        $\displaystyle
+            \exists \int_{-\infty}^{\infty} f(x) e^{i \alpha x}\dd x
+        $
+        si este convergenta.
+        Intr-adevar, pentru ca $\displaystyle p\geq k+1 \implies \lim_{z\to\infty}f(z) = 0$.
+        Dar $\displaystyle f'(z) = \frac{h(z)}{Q^2(z)}$, unde $h$ este un polinom
+        de grad cel mult $k+p-1$.
+
+        Fie $x_0$ zeroul lui $h$ de modul maxim $\implies f'(x)$
+        are semn constant pentru $x>|x_0| \implies f(x) $ monotona pentru $x>|x_0|$.
+
+        Fie $x_1,\ x_2 \in \R \text{ cu } x_2 > x_1 > |x_0|$
+        \[
+            \begin{aligned}
+            \text{Cum } \lim_{z\to\infty} f(z) = 0 \implies
+                &\text{ fie } f>0 \text{ si } \lim_{x\to\infty} f(x) = 0^+ , x >|x_0|\\
+                &\text{ fie } f<0 \text{ si } \lim_{x\to\infty} f(x) = 0^- , x >|x_0|
+            \end{aligned}
+        \]
+        Aplicand a doua teorema de medie din calculul integral
+        $\implies \exists \xi \in (x_1;x_2)$ a.i.
+        \[
+            \int_{x_1}^{x_2} f(x) \cos \alpha x\ \dd x
+                = f(x_1) \int_{x_1}^{\xi} \cos \alpha t\ \dd t
+                + f(x_2) \int_{\xi}^{x_2} \cos \alpha t\ \dd t
+        \]
+        \[
+            \implies \left | \int_{x_1}^{x_2} f(x) \cos \alpha x\ \dd x  \right |
+                \leq \frac{2}{\alpha} |f(x_1)| + \frac{2}{\alpha} |f(x_2)|
+        \]
+        \[
+            \text{Stiind ca } \lim_{z\to\infty} f(z) = 0 \implies
+                \forall \epsilon > 0 \quad \exists \delta(\epsilon) > 0 \text{ a.i. } |f(x)|<\frac{\epsilon \alpha }{4}
+            x > \delta(\epsilon)
+        \]
+        Deci,
+        \[
+            \left | \int_{x_1}^{x_2} f(x) \cos \alpha x\ \dd x  \right |
+                \leq \frac{2}{\alpha} \big[ |f(x_1)|+ |f(x_2)| \big] < \epsilon ,
+        \]
+        \[
+            x_2 > x_1 > \max\{|x_0|,\ \delta(\epsilon)\}
+                \implies \int_{0}^{\infty} f(x)\cos \alpha x\ \dd x
+                \text{ converge }
+        \]
+        Analog $\exists$ si converge
+        \[
+            \int_{0}^{\infty} f(x)\sin \alpha x \dd x
+        \]
+        \[
+            \implies \int_{0}^{\infty} f(x) e^{i \alpha x} \dd x
+        \]
+        este deasemenea convergenta.
+
+        Fie $\Omega_r = \{z \in \C \colon |z|<r ; \Ima\; z>0\}$ ce contine toti polii functiei
+        $g$ din semiplanul superior
+        \[
+            \overset{T.Rez}{\implies} \int_{\partial \Omega_r} g(z) \dd z
+                = 2 \pi i \sum_{z \in \Omega_r} \Rez(g;z)
+                = 2 \pi i \sum_{\Ima\; z > 0} Rez(g;z)
+        \]
+        Dar
+        \[
+            \int_{\partial \Omega_r} g(z) \dd z
+                = \int_{-r}^{r} f(x)e^{i \alpha x} \dd x
+                + \int_{\gamma_r} g(z) \dd z
+        \]
+        \[
+            \overset{L.Jordan}{\implies} \lim_{r \to \infty} \int_{\gamma_r} g(z) \dd z = 0
+        \]
+        \[
+            \overset{r\to\infty}{\implies} \int_{-\infty}^{\infty} f(x)e^{i \alpha x} \dd x
+                = 2 \pi i \sum_{\Ima\; z > 0} \Rez(g;z)
+        \]
+    \end{proof}
+
+\end{tip}
