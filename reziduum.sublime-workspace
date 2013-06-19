@@ -523,7 +523,7 @@
 			"file": "rezstyle.sty",
 			"settings":
 			{
-				"buffer_size": 968,
+				"buffer_size": 967,
 				"line_ending": "Unix"
 			}
 		},
@@ -1076,15 +1076,15 @@
 					"file": "rezstyle.sty",
 					"settings":
 					{
-						"buffer_size": 968,
+						"buffer_size": 967,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								838,
-								850
+								447,
+								447
 							]
 						],
 						"settings":
@@ -1182,7 +1182,7 @@
 							"syntax": "Packages/LaTeX/TeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 114.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1315,8 +1315,8 @@
 						"selection":
 						[
 							[
-								144,
-								156
+								172,
+								172
 							]
 						],
 						"settings":
@@ -2096,6 +2096,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/D/GitHub/hmft/hmft.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
