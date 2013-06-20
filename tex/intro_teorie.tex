@@ -1,0 +1,225 @@
+\section{Integrala Riemann-Stieltjes a unei functii complexe de variabila reala}
+
+\begin{definition}
+    Fie $f=u+iv$ si $F=U+iV$, iar $[a;b]$ interval din $\R$ . Spunem ca $f$ este integrabila
+    Riemann-Stieltjes in raport cu $F$ pe intervalul $[a;b]$ daca $u$ si $v$ sunt integrabile
+    Riemann-Stieltjes in raport cu $U$ si $V$ pe $[a;b]$.
+
+    Notam :
+    \begin{equation}
+        \int_a^b f \dd F := \int_a^b u \dd U - \int_a^b v \dd V + i\int_a^b u \dd V + i\int_a^b v \dd U
+    \end{equation}
+\end{definition}
+
+\begin{theorem}
+    Consideram  $f=u+iv$ ,  $F=U+iV$ , iar $f_n : [a;b] \mapsto \C$ , $F_n : [a;b]\mapsto \C$ ,
+     si $\alpha$ , $\beta \in \C$
+
+    Au loc urmatoarele proprietati:
+    \begin{enumerate}
+        \item Daca $f$ este integrabila R-S in raport cu $F$ pe $[a;b]$ , atunci $F$ este integrabila
+            R-S in raport cu $f$ si
+            \[
+                \int_a^b f \dd F + \int_a^b F \dd f = f(b) F(b) -f(a)F(a)
+            \]
+        \item Daca $f$ si $g$sunt integrabile R-S in raport cu $F$ pe $[a;b]$ , atunci
+            $\alpha f $ si $\beta g$ e integrabila dupa $F$ si
+            \[
+               \int_a^b (\alpha f + \beta g) \dd F = \alpha \int_a^b f \dd F + \beta \int_a^b g \dd F
+            \]
+        \item Daca $f$ este continuua si $F$ este cu variatie marginita pe $[a;b]$ , atunci f este
+            integrabila pe $[a;b]$ in raport cu $F$
+        \item Fie $(f_n)_{n \in \mathbb{N}}$ un sir de functii continuue ce converge uniform catre
+            $f$ pe $[a;b]$ si $(F_n)_{n \in \mathbb{N}}$ un sir de functii cu variatie marginita
+            care converge punctual catre $F$, iar sirul $\mathrm{V}(F_n, [a;b])$ marginit
+            Atunci avem ca:
+            \[
+                \lim_{\substack{
+                        n \to \infty \\
+                        k \to \infty
+                    }} \int_a^b f_n \dd F_k = \int_a^b f \dd F
+            \]
+        \item Daca $f$ e continuua , $F$ derivabila si $F'$ continuua, atunci :
+            \[
+                \int_a^b f \dd F = \int_a^b f(t) F'(t) \dd t
+            \]
+        \item Fie $c \in (a;b)$ si $f$ integrabila in raport cu $F$ pe $[a;b]$, atunci $f$
+            este integrabila in raport cu $F$ si pe $[a;c]$ , si
+            \[
+                \int_a^b f \dd F = \int_a^c f \dd F + \int_c^b f \dd F
+            \]
+        \item Daca $f$ e integrabila in raport cu $F$ pe $[a;b]$, si $h:[a';b'] \mapsto [a;b]$
+            $h(a')=a$ si $h(b')=b$, $h$ fiind omeomorfism, atunci $f \circ h$ e integrabila R-S pe
+            $F \circ H$ si
+            \[ \int_a^b f \dd F = \int_{a'}^{b'} (f \circ h) \dd (F \circ H)  \]
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+    Consideram drumul rectificabil $\gamma$ , iar $f:\{\gamma\} \mapsto \C$ continuua.
+    Atunci $f \circ \gamma$ va fi continuua pe $[0;1]$ si integrabila in raport cu $\gamma$
+    Aceasta inegrala se numeste integrala complexa a drumului $f$ de-a lungul lui $\gamma$
+    \begin{equation}
+        \int_{\gamma} f := \int_{\gamma} f(\epsilon) \dd \epsilon = \int_0^1 (f \circ \gamma) \dd \gamma
+    \end{equation}
+\end{definition}
+
+\begin{theorem}
+    Fie $\alpha$ , $\beta \in \C$ , $\gamma$ drum rectificabil din $\mathcal{D}(z_0;z_1)$
+    si $f$, $g$ functii continuue din $\{\gamma\}$, atunci:
+    \begin{enumerate}
+        \item
+            \[
+                \int_{\gamma} \alpha f + \beta g  = \alpha \int_{\gamma} f + \beta \int_{\gamma} g
+            \]
+        \item
+            \[
+                \int_{\gamma} -f = -\int_{\gamma} f
+            \]
+        \item Fie $\gamma_1$ drum rectificabil din $\mathcal{D}(z_1;z_2)$ si $f$ continuua pe
+            $\{\gamma_1\}$, atunci:
+            \[
+                \int_{\gamma \cup \gamma_1} f = \int_{\gamma} f + \int_{\gamma_1} -f
+            \]
+        \item Daca $(\gamma_1, \gamma_2, \cdots, \gamma_n)$ e o descompunere a lui $\gamma$ atunci
+            \[
+                \int_{\gamma} f = \sum_{k=1}^{\infty} \int_{\gamma_k} f
+            \]
+        \item Daca pentru $\forall t \in [0;1]$ avem ca $|f(\gamma(t))| \leq M$, atunci
+            \[
+                \left | \int_{\gamma} f \right | \leq M \cdot \mathrm{V}(\gamma)
+            \]
+        \item Fie $\gamma$ un drum liniar atunci
+            \[
+                 \int_{\gamma} f = (z_2 -z_1) \int_0^1 f[(1-t)z_1 + tz_2] \dd t
+            \]
+        \item Fie $f:G\mapsto \C$ continuua, G multime deschisa din $\C$ ,
+            iar $(\gamma_n)_{n\in\mathbb{N}} \in \mathcal{D}_G$ rectificabile.
+            $\{\gamma\} \subset G$ si $\{\gamma\}$ converge uniform pe $[0;1]$ catre $\gamma$, iar
+            $\mathrm{V}(\gamma_n)$ e multime marginita. Atunci:
+            \[
+                \lim_{n\to \infty} \int_{\gamma_n} f = \int_{\gamma} f
+            \]
+        \item Fie $(f_n)_{n\in\mathbb{N}}$ sir de aplicatii continuue ,
+            $f_n : \{\gamma\} \mapsto \C$ uniform convergent pe $\{\gamma\}$ catre $\C$, atunci
+            \[
+                \lim_{n\to\infty} \int_{\gamma} f_n = \int_{\gamma} f
+            \]
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+    Fie $G\subset \C$ multime deschisa, $f:G\mapsto \C$ si $g \in \mathcal{H}(G)$. Spunem ca $g$
+    este primitiva pentru $f$ daca $f = g'$.
+\end{definition}
+
+\begin{theorem}[Legatura dintre primitiva si integrala]
+    Fie o functie $f:D\mapsto \C$ continuua , unde $D$ domeniu din $\C$. Atunci
+    \begin{enumerate}
+        \item Daca pentru orice contur $\gamma$ din $D$ avem ca $\int_{\gamma} f = 0$, atunci $f$
+            admite primitiva pe $D$
+        \item Daca $g$ este o primitiva a lui $f$ pe $D$, atunci pentru $\forall$ drum rectificabil
+            $\gamma$ din $D$ are loc $\int_{\gamma} f = g(\gamma_1) - g(\gamma_0)$. Daca $\gamma$
+            e contur (drum rectificabil inchis), atunci avem $\int_{\gamma} f = 0$
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Legatura dintre olomorfie si primitiva]
+    Fie $D$ un domeniu stelat in $z_0$, iar $d_1, \cdots , d_n$ drepte ce trec prin $z_0$,
+    $d$ reuniunea lor. Daca $f:D\mapsto \C$ e continuua pe $D$ si derivabila pe $D\setminus d$,
+    atunci $f$ admite primitiva pe $D$
+\end{theorem}
+
+\begin{theorem}[Cauchy]
+    Fie $G$ o multime deschisa. Daca functia $f\in\mathcal{H}(G)$, iar conturul $\gamma$ e omotop cu zero
+     in $G$, atunci
+     \[
+        \int_{\gamma} f = 0
+     \]
+\end{theorem}
+
+
+\section{Zerourile functiilor olomorfe}
+
+\begin{definition}
+    Fie $G\subset \C$ deschisa, iar $f \in \mathcal{H}(G)$. Daca $\exists$ un punct $z\in G$ a.i.
+    $f(z) = 0$, atunci $z$ se numeste zerou al functiei $f$. Daca $\exists$ un $k\in\mathbb{N}^{*}$
+    a.i.
+    \[
+        f(z) = f'(z) = \cdots = f^{k-1}(z) = 0
+    \]
+    si $f^{k}(z) \neq 0$, atunci $z$ se numeste zerou multiplu de ordin $k$ pentru $f$
+
+    Pentru $k=1$ il numim pe $z$ zerou simplu
+\end{definition}
+
+\begin{theorem}
+    Daca $z$ este un zerou multiplu de ordin $k$ al functiei $f \in \mathcal{H}(G)$ , atunci
+    $\exists g \in \mathcal{H}(G)$ a.i.
+    \[
+        g(x) \neq 0 \text{ si }  f(x) = (x-z)^k g(x) \forall x \in G
+    \]
+\end{theorem}
+
+\begin{theorem}
+    Fie $D \subset \C$ domeniu si $f,g : D\mapsto \C$ functii olomorfe pe $D$. Urmatoarele afirmatii
+    sunt echivalente:
+    \begin{enumerate}
+        \item $f \equiv g$
+        \item $\exists$ un punct $a\in D$ a.i. $f^{k}(a) = g^{k}(a) \forall k \in \mathbb{N}$
+        \item $ \{z \in D \colon f(z) = g(z)\} \neq \emptyset$
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Zerourile unei functii olomorfe]
+    Fie $D \subset \C$ domeniu si $f\in \mathcal{H}(G)$ nu este identic nula pe $D$, iar $z_0 \in D$
+    este un zerou al lui $f$, atunci $\exists r=r(z_0)>0$  a.i. $\mathcal{U}(z_0;r) \subset D $
+    si $f(z) \neq 0, z\in \dot{\mathcal{U}}(z_0;r)$
+\end{theorem}
+
+\begin{theorem}[Maximul modulului]
+    Fie $D \subset \C$ domeniu si $f:D\mapsto \C$ o functie olomorfa. Daca $\exists$ un punct
+    $z_0 \in D$ a.i. $|f(z)| \leq |f(z_0)|$, $\forall z \in D $, atunci $f$ este constanta
+\end{theorem}
+
+\begin{theorem}[Lemma lui Schwarz]
+    Fie functia $f$ olomorfa pe $\mathcal{U}(0;1)$ a.i. $f(0) = 0$ si $|f(z)| < M$,
+    $z\in \mathcal{U}$, $M>0$. Atunci:
+    \[
+        |f(z)| \leq M |z| \text{ , } z \in \mathcal{U} \text{ si } |f'(0)| \leq M
+    \]
+
+    Daca $\exists z_0 \in \dot{\mathcal{U}}(z_0;r)$ a.i. $|f(z_0)| = M |z_0| $ sau daca
+    $|f'(0)| = M$, atunci $\exists \alpha \in \C $ a.i. $|\alpha| = M $ si $f(z) = \alpha z$,
+    $z \in \mathcal{U}$
+\end{theorem}
+
+\section{Serii Laurent}
+
+\begin{definition}
+    Se numeste seria Laurent in jurul lui $z_0 \in \C$ :
+    \begin{equation}
+        \sum_{n=-\infty}^{\infty} a_n(z-z_0)^n =
+            \cdots + \frac{a_{-n}}{(z-z_0)^n} + \cdots + \frac{a_{-1}}{z-z_0} + a_0 + \cdots a_n(z-z_0)^n + \cdots
+    \end{equation}
+    unde $a_n \in \C$ si se numesc coeficientii seriei.
+
+    Daca $\forall n < 0$ avem $a_n = 0$ spunem ca seria Laurent se reduce la o serie de puteri.
+
+    \begin{align*}
+        &\sum_{n=1}^{\infty} a_{-n}(z-z_0)^{-n} \text { se numeste partea principala, iar } \\
+        &\sum_{n=0}^{\infty} a_n(z-z_0)^n \text { se numeste partea tayloreana}
+    \end{align*}
+\end{definition}
+
+\begin{theorem}[Coroanei de convergenta]
+    Fie $\displaystyle \sum_{n=-\infty}^{\infty} a_n(z-z_0)^n$ serie Laurent si folosim notatiile
+    \begin{align*}
+        r &= \overline{\lim_{n \to \infty}} \sqrt[n]{|a_{-n}|} \\
+        \frac{1}{R} &=\overline{\lim_{n \to \infty}} \sqrt[n]{|a_n|}
+    \end{align*}
+    In conditiile in care $r<R$, avem:
+    \begin{enumerate}
+        \item $\mathcal{U}(z_0;r;R) = \{z \colon r < |z-z_0| < R\}$
+    \end{enumerate}
+\end{theorem}

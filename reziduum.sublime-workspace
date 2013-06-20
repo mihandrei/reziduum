@@ -520,34 +520,18 @@
 	"buffers":
 	[
 		{
-			"file": "rezstyle.sty",
-			"settings":
-			{
-				"buffer_size": 967,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "trez.tex",
 			"settings":
 			{
-				"buffer_size": 512,
+				"buffer_size": 542,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "tex/integrale_tip.tex",
+			"file": "tex/intro_teorie.tex",
 			"settings":
 			{
-				"buffer_size": 9634,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "tex/aplicatii.tex",
-			"settings":
-			{
-				"buffer_size": 16645,
+				"buffer_size": 9667,
 				"line_ending": "Unix"
 			}
 		}
@@ -752,6 +736,9 @@
 	},
 	"file_history":
 	[
+		"/D/GitHub/reziduum/rezstyle.sty",
+		"/D/GitHub/reziduum/tex/integrale_tip.tex",
+		"/D/GitHub/reziduum/tex/aplicatii.tex",
 		"/D/workspace/life/src/life/core.clj",
 		"/E/life.html",
 		"/D/GitHub/reziduum/tex/teo_rez.tex",
@@ -762,7 +749,6 @@
 		"/D/GitHub/reziduum/tex/felementare.tex",
 		"/D/GitHub/reziduum/tex/felementare.log",
 		"/D/GitHub/reziduum/reziduum.tex",
-		"/D/GitHub/reziduum/rezstyle.sty",
 		"/D/GitHub/reziduum/reziduum.sty",
 		"/C/Users/mihai/AppData/Roaming/Sublime Text 2/Packages/LaTeXTools/README.markdown",
 		"/C/Users/mihai/AppData/Roaming/Sublime Text 2/Packages/LaTeXTools/LaTeXTools Preferences.sublime-settings",
@@ -877,9 +863,7 @@
 		"/D/GitHub/hmft/riak/remote_setup.sh",
 		"/D/GitHub/hmft/riak/setup_riak.sh",
 		"/D/Downloads/riak_script.sh",
-		"/D/Desktop/Dynamo paper",
-		"/D/GitHub/hmft/riak/app.config.template",
-		"/D/GitHub/hmft/src/hmft/hmft.web/Web/design/flatstrap/font-signika.less"
+		"/D/Desktop/Dynamo paper"
 	],
 	"find":
 	{
@@ -887,7 +871,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"*.tex",
@@ -911,9 +895,21 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"overl",
+			"displays",
+			"dot",
+			"\\Phi",
+			"emptys",
+			"varno",
+			"emptys",
+			"oslash",
+			"slash",
+			"item",
+			"R",
+			"Stieltjes",
 			"-a",
 			"^a",
 			"a",
@@ -1029,24 +1025,12 @@
 			"\\\"Close\\\"",
 			"\"Close\"",
 			"widgets.common.button \"Close\" \"Close\"",
-			"withCloseButton",
-			"Form handler created",
-			"withCloseButton",
-			"externalPage",
-			"progressPage",
-			"Impl",
-			"impl",
-			"commonLayout",
-			"render",
-			"[\\s.]render\\s",
-			"[\\s.]render",
-			"render",
-			"1MB"
+			"withCloseButton"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"X",
@@ -1068,139 +1052,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "rezstyle.sty",
-					"settings":
-					{
-						"buffer_size": 967,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								447,
-								447
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-								"html": "C:\\Users\\mihai\\AppData\\Roaming\\Sublime Text 2\\Packages\\SublimeLinter\\tidy.exe"
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/LaTeX/TeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "trez.tex",
 					"settings":
 					{
-						"buffer_size": 512,
+						"buffer_size": 542,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								426,
-								426
+								503,
+								503
 							]
 						],
 						"settings":
@@ -1304,137 +1172,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "tex/integrale_tip.tex",
+					"buffer": 1,
+					"file": "tex/intro_teorie.tex",
 					"settings":
 					{
-						"buffer_size": 9634,
+						"buffer_size": 9667,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								172,
-								172
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-								"html": "C:\\Users\\mihai\\AppData\\Roaming\\Sublime Text 2\\Packages\\SublimeLinter\\tidy.exe"
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "tex/aplicatii.tex",
-					"settings":
-					{
-						"buffer_size": 16645,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14547,
-								14547
+								9631,
+								9631
 							]
 						],
 						"settings":
@@ -1539,7 +1289,7 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6264.0,
+						"translation.y": 3508.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1600,6 +1350,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"ty",
+				"rezstyle.sty"
+			],
 			[
 				"te",
 				"tex/teo_rez.tex"
