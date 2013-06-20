@@ -221,5 +221,45 @@
     In conditiile in care $r<R$, avem:
     \begin{enumerate}
         \item $\mathcal{U}(z_0;r;R) = \{z \colon r < |z-z_0| < R\}$
+            coroana de convergenta a seriei Laurent converge absolut si uniform pe compacte
+        \item
+            \[
+                \sum_{n=-\infty}^{\infty} a_n(z-z_0)^n \text{ diverge in }
+                    \C \setminus \overline{\mathcal{U}}(z_0;r;R)
+            \]
+        \item
+            \[
+                f(z) = \sum_{n=-\infty}^{\infty} a_n(z-z_0)^n \in \mathcal{H}(\mathcal{U}(z_0;r;R))
+            \]
+    \end{enumerate}
+\end{theorem}
+
+\section{Functii meromorfe}
+
+\begin{definition}
+    Fie $f : \widetilde{G} \mapsto \C$, unde $\widetilde{G}$ multime deschisa din $G$.
+    Spunem ca $f$ este meromorfa pe $\widetilde{G}$ si notam $f\in \mathcal{M}(\widetilde{G})$ daca
+    $\exists$ o multime $E$ care sa fie alcatuita numai din punctele eliminabile, respectiv poli
+    ai functiei $f$ si sa fie olomorfa pe $\widetilde{G} \setminus E$
+\end{definition}
+
+\section{Index unei curbe}
+
+\begin{definition}
+    Fie $\gamma$ un drum rectificabil din $\C$ si $z_0 \in \C \setminus \{ \gamma \}$.
+    Numim indexul lui $\gamma$ in raport cu $z_0$ :
+    \begin{equation}
+        n(\gamma;z_0) := \frac{1}{2 \pi i} \int_{\gamma} \frac{\dd \zeta}{\zeta - z_0}
+    \end{equation}
+\end{definition}
+
+\begin{theorem}
+    \begin{enumerate}
+        \item Fie $\gamma_1$ si $\gamma_2$ drumuri rectificabile din $\C$
+            si $z_0 \in \C \setminus \{\gamma_j\}$, $j=\overline{1,2}$. Daca $\gamma_1 \sim \gamma_2$
+            in $\C \setminus\{z_0\} \implies n(\gamma_1;z_0) = n(\gamma_2;z_0)$
+        %\item Daca $\gamma_1$ si $\gamma_2$ drumuri rectificabile din $\C$ a.i.
+        \item TODO
+        \item TODO
     \end{enumerate}
 \end{theorem}

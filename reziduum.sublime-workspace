@@ -523,7 +523,7 @@
 			"file": "trez.tex",
 			"settings":
 			{
-				"buffer_size": 542,
+				"buffer_size": 539,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,15 @@
 			"file": "tex/intro_teorie.tex",
 			"settings":
 			{
-				"buffer_size": 9667,
+				"buffer_size": 11291,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tex/teo_rez.tex",
+			"settings":
+			{
+				"buffer_size": 5042,
 				"line_ending": "Unix"
 			}
 		}
@@ -736,13 +744,13 @@
 	},
 	"file_history":
 	[
+		"/D/GitHub/reziduum/tex/drumuri.tex",
 		"/D/GitHub/reziduum/rezstyle.sty",
 		"/D/GitHub/reziduum/tex/integrale_tip.tex",
 		"/D/GitHub/reziduum/tex/aplicatii.tex",
 		"/D/workspace/life/src/life/core.clj",
 		"/E/life.html",
 		"/D/GitHub/reziduum/tex/teo_rez.tex",
-		"/D/GitHub/reziduum/tex/drumuri.tex",
 		"/D/GitHub/reziduum/tex/notiuni_introductive.tex",
 		"/D/GitHub/reziduum/tex/derivata.tex",
 		"/D/GitHub/reziduum/tex/teo_rez.log",
@@ -871,7 +879,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"*.tex",
@@ -898,6 +906,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"section",
 			"overl",
 			"displays",
 			"dot",
@@ -1024,8 +1033,7 @@
 			"\"Close\"",
 			"\\\"Close\\\"",
 			"\"Close\"",
-			"widgets.common.button \"Close\" \"Close\"",
-			"withCloseButton"
+			"widgets.common.button \"Close\" \"Close\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1052,7 +1060,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1060,15 +1068,15 @@
 					"file": "trez.tex",
 					"settings":
 					{
-						"buffer_size": 542,
+						"buffer_size": 539,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								503,
-								503
+								427,
+								109
 							]
 						],
 						"settings":
@@ -1176,15 +1184,15 @@
 					"file": "tex/intro_teorie.tex",
 					"settings":
 					{
-						"buffer_size": 9667,
+						"buffer_size": 11291,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9631,
-								9631
+								11257,
+								11257
 							]
 						],
 						"settings":
@@ -1289,7 +1297,125 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3508.0,
+						"translation.y": 4449.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tex/teo_rez.tex",
+					"settings":
+					{
+						"buffer_size": 5042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								981,
+								981
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"html": "C:\\Users\\mihai\\AppData\\Roaming\\Sublime Text 2\\Packages\\SublimeLinter\\tidy.exe"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1938.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1351,12 +1477,16 @@
 		"selected_items":
 		[
 			[
-				"ty",
-				"rezstyle.sty"
+				"dr",
+				"tex/drumuri.tex"
 			],
 			[
 				"te",
 				"tex/teo_rez.tex"
+			],
+			[
+				"ty",
+				"rezstyle.sty"
 			],
 			[
 				"teo",
