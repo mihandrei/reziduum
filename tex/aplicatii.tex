@@ -175,7 +175,27 @@
             Polii acestei functii sunt simpli , $z = (zk+1)\frac{i}{2}$, $k \in \Z$
             Pentru a evita seria de reziduuri care este divergenta alegem conturul
 
-            IMAGINE
+            \begin{center}
+                \begin{tikzpicture}[decoration={markings,
+                    mark=at position 1cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 3cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 5cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 7cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 9cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 11cm with {\arrow[line width=1pt]{>}},
+                    }]
+
+                    \draw[help lines,->] (-3,0) -- (3,0) coordinate (xaxis);
+                    \draw[help lines,->] (0,-1) -- (0,3) coordinate (yaxis);
+
+                    \path[draw,line width=0.8pt,postaction=decorate] (-2,0) node[below] {$-R$} -- (2,0) node[below] {$R$} -- (2,2) -- (-2,2) -- cycle;
+
+                    \node[below] at (xaxis) {$Re$};
+                    \node[left] at (yaxis) {$Im$};
+                    \node[below left] {$O$};
+                    \node[below left] at (0,2) {$i$};
+                \end{tikzpicture}
+            \end{center}
 
             Pe latura $z=R + i y \quad ( 0 \leq y \leq 1)$
 
@@ -330,10 +350,34 @@
             \text{Unde } h(z) = \frac{f(z)}{z^\alpha} \text{ , iar} z^\alpha = e^{\alpha \log z}
         \]
         cu $\log z$ ramura uniforma a aplicatiei multivoce Logaritm
-        \begin{proof}           
+        \begin{proof}
             Fie $\Gamma $ conturul din imagine
 
-            IMAGINE
+            \begin{center}
+                \begin{tikzpicture}[decoration={markings,
+                    mark=at position 0.6cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 2.6cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 5.6cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 9cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 11.6cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 13.8cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 16.5cm with {\arrow[line width=1pt]{>}},
+                    mark=at position 18.5cm with {\arrow[line width=1pt]{>}},
+                    }]
+
+                    \draw[help lines,->] (-3,0) -- (3,0) coordinate (xaxis);
+                    \draw[help lines,->] (0,-3) -- (0,3) coordinate (yaxis);
+
+                    \path[draw,line width=0.8pt,postaction=decorate] (10:1) node[left] {$r_1$} -- +(1,0) node[right] {$r_2$} arc (5:355:2) -- +(-1,0) arc (-10:-350:1);
+
+                    \node[below] at (xaxis) {$Re$};
+                    \node[left] at (yaxis) {$Im$};
+                    \node[below left] {$O$};
+                    \node at (-0.9,1) {$\gamma_{r_1}^{-}$};
+                    \node at (1.4,1.9) {$\gamma_{r_2}$};
+
+                \end{tikzpicture}
+            \end{center}
 
             Atunci
             \[
@@ -347,7 +391,7 @@
                     - \int_{r_1}^{r_2} \frac{f(x)}{e^\alpha[\ln x + 2\pi i]} \dd x
                     - \int_{\gamma_{r_1}} \frac{f(z)}{z^\alpha} \dd z
             \]
-            
+
             Deci
             \[
                \text{(*) } 2 \pi i  \sum_{z\in \C^*} \Rez(g;z)
@@ -355,7 +399,7 @@
                     - \int_{\gamma_{r_1}} \frac{f(z)}{z^\alpha} \dd z
                     + (1-e^{-2\pi i \alpha}) \int_{r_1}^{r_2} \frac{f(x)}{x^\alpha} \dd x
             \]
-            
+
             Cum $\displaystyle lim_{z\to\infty} f(z) = 0$ urmeaza ca $p \leq k+1$, unde $k$ si $p$
             sunt gradele polinoamelor $P$ respectiv $Q$. Deoarece $a \in (0;1)$, obtinem imediat
             ca

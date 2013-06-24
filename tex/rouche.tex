@@ -69,7 +69,21 @@ Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu
 \begin{aplicatie}
     Sa se determine numarul solutiilor ecuatiei $z^4 -8z + 10 = 0 $ in $\mathcal{U}(0;1;3)$
     \begin{proof}
-        IMAGINE
+        \begin{center}
+            \begin{tikzpicture}
+                    \draw[help lines,->] (-3,0) -- (3,0) coordinate (xaxis);
+                    \draw[help lines,->] (0,-3) -- (0,3) coordinate (yaxis);
+                    \draw (0,0) circle (1cm);
+                    \draw (0,0) circle (2cm);
+
+                    \node[below] at (xaxis) {$Re$};
+                    \node[left] at (yaxis) {$Im$};
+                    \node[below left] at (1,0) {$1$};
+                    \node[below left] at (2,0) {$2$};
+                    \node[above left] at (0,1) {$i$};
+                \end{tikzpicture}
+        \end{center}
+
         \[
             \mathcal{U}(0;1;3) = \mathcal{U}(0;3)\setminus
                 \big(\mathcal{U}(0;1) \cup \partial \mathcal{U}(0;1)\big)
