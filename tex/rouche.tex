@@ -1,0 +1,157 @@
+\section{Aplicatii in teoria functiilor}
+
+Urmatorul rezultat face legatura intre numarul de zerouri si numarul de poli ai unei functii analitice.
+
+\begin{theorem}
+    Fie $D \in \C$ domeniu stelat si $f \in \mathcal{M}(D)$ cu zerouurile :
+    $a_1, \cdots , a_n \in D$, si polii $b_1, \cdots, b_m \in D$ .
+    Atunci pentru orice contur $\gamma$ din $D$ ce evita toate zerourile
+    si toti polii lui $f$ avem:
+    \[
+        \frac{1}{2\pi i} \int_{\gamma} \frac{f'}{f}(\zeta) \dd \zeta
+        = \sum_{k=1}^{n} o(f; a_k)\; n(\gamma;a_k)
+        + \sum_{l=1}^{m} o(f; b_l)\; n(\gamma;b_l)
+    \]
+\end{theorem}
+
+O aplicatie a teoremei anterioare e teorema:
+
+\begin{theorem}[Hurwitz]
+    Fie $f_1, f_2, \cdots : D \mapsto \C$ un sir de functii ce converge local uniform
+    la functia analitica $f : D \mapsto \C$. Daca $\forall i f_i $ nu e identic nula pe D
+    atunci $f$ fie e identic nula ori nu are nici un zerou in $D$
+\end{theorem}
+
+\begin{theorem}
+    Fie $D \in \C$ domeniu stelat si $f \in \mathcal{M}(D)$ cu zerouurile :
+    $a_1, \cdots , a_n \in D$, si polii $b_1, \cdots, b_m \in D$.
+    Notam:
+    \begin{align*}
+        N(0) &:= \sum_{k=1}^{n} o(f;a_k) && \text{numarul tuturor zerourilor lui } f \text{ ;} \\
+        N(\infty) &:= - \sum_{l=1}^{m} o(f;b_l) && \text{numarul tuturor polilor lui } f \text{ ;}
+    \end{align*}
+    numarand multiplicitatile.  Fie $\gamma$ din $D$ ce inconjoara cu index 1 toate
+    zerourile si toti polii. Atunci avem:
+    \[
+        \frac{1}{2\pi i} \int_{\gamma} \frac{f'}{f} (zeta) \dd \zeta = N(0) - N(\infty) .
+    \]
+\end{theorem}
+
+Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu.
+
+\begin{aplicatie}[Teorema fundamentala a algebrei]
+    Orice polinom $P(z)$ de grad $n$ cu coeficienti complecsi, are exact n radacini complexe.
+    \begin{proof}
+        Deoarece $\lim_{|z| \to \infty} P(z) = \infty$ , $\exists R > 0$ a.i. $P$ nu are radacini
+        $z$ cu $|z| \geq R$ . Numarul de zerouri a lui $P$ e :
+        \[
+            N(0) = \frac{1}{2\pi i}\int_{|\zeta| = R} \frac{P'(\zeta)}{P(\zeta)} \dd \zeta .
+        \]
+        Functia $P'/P$ are in $\infty$ un zerou simplu. Seria Laurent in $\infty$ e de forma :
+        \[
+            \frac{n}{z} + \frac{c_2}{z^2} + \frac{c_3}{z^3} + \cdots (n = grad(P)) .
+        \]
+        Deci:
+        \[
+            N(0) = n = grad(P).
+        \]
+    \end{proof}
+\end{aplicatie}
+
+\begin{theorem}[Rouche]
+    Fie $f$, $g : D \mapsto \C$ analitice si $\gamma$ un contur din $D$ ce inconjoara
+    orice punct din interiorul sau exact o data.
+    Daca $|g(\zeta)| < |f(\zeta)| \forall \zeta \in \{\gamma\}$ atunci
+    $f$, $f+g$ nu au zerouri in $\{\gamma\}$ si au in interiorul lui $\gamma$ acelasi numar de zerouri
+    considerand multiplicitatile.
+\end{theorem}
+
+\begin{aplicatie}
+    Sa se determine numarul solutiilor ecuatiei $z^4 -8z + 10 = 0 $ in $\mathcal{U}(0;1;3)$
+    \begin{proof}
+        IMAGINE
+        \[
+            \mathcal{U}(0;1;3) = \mathcal{U}(0;3)\setminus
+                \big(\mathcal{U}(0;1) \cup \partial \mathcal{U}(0;1)\big)
+        \]
+        \begin{align*}
+            N_1 :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;3) \\
+            N_2 :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;1) \\
+            N :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;1;3)  \\
+            N &= N_1 - N_2
+        \end{align*}
+
+        Determinam $N_1$. Avem $|z| < 3$.
+
+        Alegem $f(z) = z^4$ si $g(z) = -8z + 10$.
+        \begin{align*}
+            |z^4| &= 3^4 = 81 \\
+            |-8z + 10| &\leq 8|z| + 10 = 24 + 10 = 34 < 81 \implies \\
+            |g(z)| &< |f(z)| \text{ pentru } |z| = 2 \overset{T.Rouche}{\implies} \\
+            f(z) = 0 \text{ si } & f(z) + g(z) = 0 \text{ au acelasi numar de solutii in }
+                \mathcal{U}(0;3) \\
+            \implies & N_1 = 4
+        \end{align*}
+
+        Determinam $N_2$.
+        \begin{align*}
+            N'_2 :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;1) \\
+            N''_2 :&= \text{ numarul solutiilor ecuatiei pe } \partial \mathcal{U}(0;1) \\
+            N_2 &= N'_2 + N''_2
+        \end{align*}
+        \begin{align*}
+            |z| & = 1 \\
+            f(z) & = -8z + 10 \implies g(z) = z^4 \\
+            |f(z)| &\leq -8|z| + 10 =  18 \\
+            |g(z)| &= |z^4| = 1 < 18 \overset{T.Rouche}{\implies}\\
+            f(z) &= 0 \text{ si } f(z) + g(z) = 0 \text{ au acelasi numar de solutii }\\
+            -8z + 10 &= 0 \implies z = 2 > 1 \implies N_2 = 0 \text{ numar de solutii in } \mathcal{U}(0;1)\\
+            |f(z) + g(z)| &\geq |f(z)| + |g(z)| > 0, |z| = 1 \implies N''_2 = 0
+        \end{align*}
+        Deci $N = 4-0 = 4$
+    \end{proof}
+\end{aplicatie}
+
+\begin{aplicatie}
+    Fie $P_n(z) = a_0 + a_1 z + \cdots + a_n z^n$, $z \in \C$, unde $a_n \neq 0$ .
+    \[
+        \text{Fie } \alpha_n = \frac{ \sum_{k=0}^{n-1} |a_k|}{|a_n|}
+             \text{ , si } \quad r > \max\{\alpha_n,1\} .
+    \]
+    Sa se arate ca toate solitiile polinomului $P_n \in \mathcal{U}(0;r)$.
+    \begin{proof}
+        Fie :
+        \begin{align*}
+            f(z) &:= a_n z^n \\
+            g(z) &:= a_0 + a_1 z + \cdots + a_{n-1}z^{n-1} = P_n(z) - f(z)
+        \end{align*}
+        Avem :
+        \begin{align*}
+            |z| &= r \\
+            |f(z)| &= a_n |r|^n = |a_n| r^n\\
+            |g(z)| &= |a_0 + a_1 z + \cdots + a_{n-1}z^{n-1}| \\
+                   &\leq |a_0| + |a_1| |z| + \cdots + |a_{n-1}| |z|^{n-1}\\
+                   &= |a_0| + |a_1| r + \cdots + |a_{n-1}|r^{n-1}\\
+            \text{Deoarece } & r^k \leq r^{n-1} \forall k = \overline{0,n-1} \\
+            |g(z)| &\leq r^{n-1} (|a_0| + |a_1| + \cdots + |a_{n-1}|)
+                = r^{n-1}\sum_{k=0}^{n-1}|a_k| \implies \\
+            |g(z)| &\leq r^{n-1} \alpha_n |a_n|
+                = \frac{\alpha_n r^n |a_n|}{r} = \frac{\alpha_n}{r} |f(z)| \\
+            \text{Cum } & \frac{\alpha_n}{r} < 1 \text{ avem ca : }\\
+            |g(z)| & < |f(z)| \;,\quad |z| = r
+                \overset{T.Rouche}{\implies}\\
+            f(z) = 0 & \text{ si } f(z) + g(z) = 0
+                \text{ au acelasi numar de solutii in } \mathcal{U}(0;r)
+        \end{align*}
+        \[
+            \left \{
+                \begin{aligned}
+                    f(z) &= 0 \\
+                    P_n(z) &= 0
+                \end{aligned}
+            \right.
+            \text{ au acelasi numar de solutii } \implies N = n
+        \]
+
+    \end{proof}
+\end{aplicatie}
