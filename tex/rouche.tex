@@ -67,19 +67,19 @@ Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu
 \end{theorem}
 
 \begin{aplicatie}
-    Sa se determine numarul solutiilor ecuatiei $z^4 -8z + 10 = 0 $ in $\mathcal{U}(0;1;3)$
+    Sa se determine numarul solutiilor ecuatiei $z^4 -8z + 10 = 0 $ in $\mathcal{U}(0;1;3)$.
     \begin{proof}
         \begin{center}
             \begin{tikzpicture}
-                    \draw[help lines,->] (-3,0) -- (3,0) coordinate (xaxis);
-                    \draw[help lines,->] (0,-3) -- (0,3) coordinate (yaxis);
+                    \draw[help lines,->] (-3.7,0) -- (3.7,0) coordinate (xaxis);
+                    \draw[help lines,->] (0,-3.7) -- (0,3.7) coordinate (yaxis);
                     \draw (0,0) circle (1cm);
-                    \draw (0,0) circle (2cm);
+                    \draw (0,0) circle (3cm);
 
                     \node[below] at (xaxis) {$Re$};
                     \node[left] at (yaxis) {$Im$};
                     \node[below left] at (1,0) {$1$};
-                    \node[below left] at (2,0) {$2$};
+                    \node[below left] at (3,0) {$3$};
                     \node[above left] at (0,1) {$i$};
                 \end{tikzpicture}
         \end{center}
@@ -90,24 +90,24 @@ Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu
         \]
         \begin{align*}
             N_1 :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;3) \\
-            N_2 :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;1) \\
+            N_2 :&= \text{ numarul solutiilor ecuatiei in } \overline{\mathcal{U}}(0;1) \\
             N :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;1;3)  \\
             N &= N_1 - N_2
         \end{align*}
 
-        Determinam $N_1$. Avem $|z| < 3$.
+        Determinam $N_1$ : Avem $|z| = 3$.
 
         Alegem $f(z) = z^4$ si $g(z) = -8z + 10$.
         \begin{align*}
             |z^4| &= 3^4 = 81 \\
             |-8z + 10| &\leq 8|z| + 10 = 24 + 10 = 34 < 81 \implies \\
-            |g(z)| &< |f(z)| \text{ pentru } |z| = 2 \overset{T.Rouche}{\implies} \\
+            |g(z)| &< |f(z)| \text{ pentru } |z| = 3 \overset{T.Rouche}{\implies} \\
             f(z) = 0 \text{ si } & f(z) + g(z) = 0 \text{ au acelasi numar de solutii in }
                 \mathcal{U}(0;3) \\
             \implies & N_1 = 4
         \end{align*}
 
-        Determinam $N_2$.
+        Determinam $N_2$ :
         \begin{align*}
             N'_2 :&= \text{ numarul solutiilor ecuatiei in } \mathcal{U}(0;1) \\
             N''_2 :&= \text{ numarul solutiilor ecuatiei pe } \partial \mathcal{U}(0;1) \\
@@ -116,13 +116,13 @@ Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu
         \begin{align*}
             |z| & = 1 \\
             f(z) & = -8z + 10 \implies g(z) = z^4 \\
-            |f(z)| &\leq -8|z| + 10 =  18 \\
+            |f(z)| &\leq 8|z| + 10 =  18 \\
             |g(z)| &= |z^4| = 1 < 18 \overset{T.Rouche}{\implies}\\
             f(z) &= 0 \text{ si } f(z) + g(z) = 0 \text{ au acelasi numar de solutii }\\
-            -8z + 10 &= 0 \implies z = 2 > 1 \implies N_2 = 0 \text{ numar de solutii in } \mathcal{U}(0;1)\\
-            |f(z) + g(z)| &\geq |f(z)| + |g(z)| > 0, |z| = 1 \implies N''_2 = 0
+            -8z + 10 &= 0 \implies z = 2 > 1 \implies N_2 = 0 \text{ numar de solutii in } \mathcal{U}(0;1) .\\
+            |f(z) + g(z)| &\geq |f(z)| + |g(z)| > 0, |z| = 1 \implies N''_2 = 0 .
         \end{align*}
-        Deci $N = 4-0 = 4$
+        Deci $N = 4-0 = 4$ .
     \end{proof}
 \end{aplicatie}
 
@@ -139,14 +139,13 @@ Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu
             f(z) &:= a_n z^n \\
             g(z) &:= a_0 + a_1 z + \cdots + a_{n-1}z^{n-1} = P_n(z) - f(z)
         \end{align*}
-        Avem :
+        Pentru  $|z| = r$ avem:
         \begin{align*}
-            |z| &= r \\
             |f(z)| &= a_n |r|^n = |a_n| r^n\\
             |g(z)| &= |a_0 + a_1 z + \cdots + a_{n-1}z^{n-1}| \\
                    &\leq |a_0| + |a_1| |z| + \cdots + |a_{n-1}| |z|^{n-1}\\
                    &= |a_0| + |a_1| r + \cdots + |a_{n-1}|r^{n-1}\\
-            \text{Deoarece } & r^k \leq r^{n-1} \forall k = \overline{0,n-1} \\
+            \text{Deoarece } & r^k \leq r^{n-1}\; \forall k = \overline{0,n-1} \\
             |g(z)| &\leq r^{n-1} (|a_0| + |a_1| + \cdots + |a_{n-1}|)
                 = r^{n-1}\sum_{k=0}^{n-1}|a_k| \implies \\
             |g(z)| &\leq r^{n-1} \alpha_n |a_n|
@@ -155,7 +154,7 @@ Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu
             |g(z)| & < |f(z)| \;,\quad |z| = r
                 \overset{T.Rouche}{\implies}\\
             f(z) = 0 & \text{ si } f(z) + g(z) = 0
-                \text{ au acelasi numar de solutii in } \mathcal{U}(0;r)
+                \text{ au acelasi numar de solutii in } \mathcal{U}(0;r) .
         \end{align*}
         \[
             \left \{
@@ -164,7 +163,7 @@ Daca $f$ nu are poli obtinem o formula pentru numarul de zerouri intr-un domeniu
                     P_n(z) &= 0
                 \end{aligned}
             \right.
-            \text{ au acelasi numar de solutii } \implies N = n
+            \text{ au acelasi numar de solutii } \implies N = n .
         \]
 
     \end{proof}
