@@ -2,27 +2,45 @@
 
 \usepackage[romanian]{babel}
 \usepackage{rezstyle}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
 
 \begin{document}
 
-\title{Teorema Reziduurilor}
-\author{Tapalaga Ecaterina Simona}
-\date{Iunie 2013}
-\maketitle
+\input{tex/title}
 
-\begin{abstract}
-    Aplicatii ale teoremei reziduurilor in calculul unor chestii interesante.
-    In prima parte avem introducere apoi exemple din x urmate de aplicatii de tip y.
-\end{abstract}
+% \tableofcontents
 
-\tableofcontents
+% \clearpage
+% Introducere
 
-\clearpage
+% \clearpage
+% \input{tex/intro_teorie}
+% \input{tex/teo_rez}
+% \input{tex/integrale_tip}
+% \input{tex/aplicatii}
+% \input{tex/rouche}
 
-\input{tex/intro_teorie}
-\input{tex/teo_rez}
-\input{tex/integrale_tip}
-\input{tex/aplicatii}
+% \begin{tikzpicture}
+% % The axes
+% \draw[help lines,->] (-3,0) -- (3,0) coordinate (xaxis);
+% \draw[help lines,->] (0,-1) -- (0,3) coordinate (yaxis);
 
+% % The path
+% \path[draw,line width=0.8pt] (1,0) node[below] {$\varepsilon$} -- (2,0) node[below] {$r$} arc (0:180:2) -- (-1,0) arc (180:0:1);
+
+% % The labels
+% \node[below] at (xaxis) {$x$};
+% \node[left] at (yaxis) {$y$};
+% \node[below left] {$O$};
+% \node at (0.5,1.2) {$C_{\varepsilon}$};
+% \node at (1.5,1.8) {$C_{r}$};
+% \end{tikzpicture}
+
+% \clearpage
+
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{biblio}
 \end{document}
 
