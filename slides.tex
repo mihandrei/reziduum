@@ -1,0 +1,151 @@
+\documentclass{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Rez}{Rez}
+\DeclareMathOperator{\ctg}{ctg}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}
+
+
+%conjugat
+\newcommand*\conj[1]{\overline{#1}}
+
+%d de la derivata & integrale
+\newcommand{\dd}{\; \mathrm{d}}
+
+% = conform teor UH?
+\newcommand{\EqConformCaz}{\overset{\frac{0}{0}}{\underset{\mathrm{L'H}}{=\joinrel=}} }
+%\newcommand{\disc}[2]{\ensuremath{\mathcal{U}(#1;#2)}}
+
+
+%%   doc styles
+\linespread{1.1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Teorema Reziduurilor si aplicatii]{Teorema Reziduurilor si aplicatii}
+\author{\emph{Autor:} Tapalaga Ecaterina Simona \\ \emph{Conducator stiintific:} Prof. Dr. Salagean Grigore}
+
+\institute{\textsc{Universitatea Babes-Bolyai Cluj-Napoca} \par
+            \textsc{Facultatea de Matematica si Informatica} }
+\date{Iulie 2013}
+
+\begin{document}
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+    \begin{frame}{Despre Teorema reziduurilor}
+        \begin{itemize}
+            \item Teorema reziduurilor e o unealta puternica a analizei complexe.
+            \item Este utilizata in evaluarea integralelor functiilor analitice pe contururi.
+            \item Reduce calculul integralei la mult mai simpla evaluare a rezidurilor.
+            \item Adesea poate fi folosita la calculul integralelor reale.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Structura lucrarii}
+        \begin{itemize}
+            \item Lucrarea ilustreaza asemenea aplicatii. Unele integrale prezentate nu pot fi evaluate prin metode elementare.
+            \item Lucrarea este impartita in trei capitole:
+
+            \begin{itemize}
+                \item Notiuni introductive
+                \item Teorema reziduurilor
+                \item Aplicatii ale teoremei reziduurilor
+            \end{itemize}
+
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Aplicatii ale teoriei reziduurilor la calculul unor integrale definite reale }
+        $(*)$ Fie integrala $\displaystyle I=\int_{0}^{2\pi} R(\sin x, \cos x) \dd x$, unde
+        $R(u,v)$ este o functie rationala reala ce nu are poli pe cercul $u^2+v^2=1$ .
+
+        \[
+            \text{Atunci : } \int_{0}^{2\pi} R(\sin x , \cos x) \dd x =
+            2\pi \sum_{z\in \mathcal{U}(0;1)} \Rez(f;z)
+        \]
+        \[
+            \text{unde } f(z) = \frac{1}{z} R\left(\frac{z-\frac{1}{z}}{2i},\; \frac{z+\frac{1}{z}}{2} \right)
+        \]
+    \end{frame}
+
+    \begin{frame}
+        $(**)$ Fie integrala
+        \[
+            I = \int_{-\infty}^{\infty} f(x) e^{i \alpha x}\dd x
+        \]
+        unde $f=P/Q$ , $Q(x)\neq 0$ , $x \in \R$ , $grad\ P = k$ , $grad\ Q =p$,
+        iar $p \geq k+1$ .
+
+        Daca $\alpha > 0$, atunci:
+        \[
+            I = \int_{-\infty}^{\infty} f(x) e^{i \alpha x}\dd x
+                =2 \pi i \sum_{\Ima\ z >0} \Rez(g;z)
+        \]
+        , unde $g(z) = f(z) e^{i \alpha z}$.
+
+    \end{frame}
+
+    \begin{frame}{Aplicatii concrete}
+        Sa se calculeze integrala
+        \[
+            I = \int_{-\infty}^{\infty} \frac{\cos x}{x^2+a^2} \dd x, \text{ unde } a>0 .
+        \]
+        \begin{align*}
+            \text{Fie } I_1 &= \int_{-\infty}^{\infty} \frac{\cos x}{x^2+a^2} \dd x \\
+            \text{si }  I_2 &= \int_{-\infty}^{\infty} \frac{\sin x}{x^2+a^2} \dd x (= 0 \text{ pe ca e impara}) \\
+            \text{ si fie } I &= I_1 + i I_2 \\
+            \implies I &= \int_{-\infty}^{\infty} \frac{e^{ix}}{x^2+a^2} \dd x
+        \end{align*}
+    \end{frame}
+
+    \begin{frame}
+        \begin{align*}
+            &\left .
+                \begin{aligned}
+                    P(x) &= 1 \\
+                    Q(x) &= a^2 +x^2
+                \end{aligned}
+            \right \}
+            \begin{aligned}
+                grad\; Q &\geq grad\; P+1 \\
+                2 &\geq 1
+            \end{aligned}
+            \\
+            &f(z) = \frac{e^{iz}}{a^2 +z^2}
+        \end{align*}
+
+        $a^2 +z^2 = 0 \implies z_{1,2} = \pm i a$ , dar doar $z_1 = i a$
+        pol de gradul I $\in$ semiplanul superior
+        \[
+            \implies I = 2 \pi i\; \Rez(f;z_1) = 2 \pi i\; \Rez(f;i a)
+        \]
+    \end{frame}
+    \begin{frame}
+        \[
+            \Rez(f;i a) = \lim_{z \to ia} (z - i a) \frac{e^{iz}}{z^2+a^2}
+                = \frac{e^{-a}}{z + i a} = \frac{e^{-a}}{2ia}
+        \]
+        \[
+            \implies I = 2 \pi i \frac{e^{-a}}{2ia} = \frac{e^{-a}\pi}{a}
+        \]
+        \[
+            I_1 = \Rea \; I \quad I_2=\Ima \; I
+                \implies I_1 = \frac{e^{-a}\pi}{a}; \quad I_2 = 0
+        \]
+    \end{frame}
+\end{document}
